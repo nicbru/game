@@ -2,8 +2,8 @@
         xmlns:app="urn:aviarc:widget:application">
         
      <scene-manager name="manager" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
-        <scene name="scene1" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/dev/www/img/scene1" frames="38"/>
-        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/dev/www/img/scene2" frames="57">
+        <scene name="scene1" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1" frames="38"/>
+        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2" frames="57">
             <button position="relative" label="click" margin="20" width="100" height="30">
                 <action:when event="onClick">
                     
@@ -12,6 +12,6 @@
                 </action:when>
             </button>
         </scene>
-        <scene name="scene3" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/dev/www/img/scene3" frames="44"/>
+        <scene name="scene3" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
     </scene-manager>
 </screen>
