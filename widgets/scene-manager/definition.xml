@@ -1,0 +1,19 @@
+<widget name="scene-manager"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+
+    <attributes>
+        <attribute name="x-axis" default="y"/>
+        <attribute name="y-axis" default="y"/>
+    </attributes>
+    
+    <children allowed="y"/>
+    
+    <includes>
+        <js-include file="SceneManager.js"/>
+    </includes>
+    
+    <child-widgets>
+        <widget-type name="scene"/>
+    </child-widgets>
+    
+    <js-constructor>new YAHOO.dev.SceneManager()</js-constructor>
+</widget>

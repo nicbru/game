@@ -1,0 +1,21 @@
+<widget name="kinetic"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="dev.widgets.Kinetic"
+        container-positioning="y">
+
+    <attributes>
+        <attribute name="x-axis" type="boolean" default="y"/>
+        <attribute name="y-axis" type="boolean" default="y"/>
+    </attributes>
+    
+    <children allowed="y"/>
+    
+    <includes>
+        <css-include file="kinetic.css"/>
+        <js-include file="includes/jquery-2.0.3.min.js"/>
+        <js-include file="includes/jquery.kinetic.min.js"/>
+        <js-include file="Kinetic.js"/>
+    </includes>
+    
+    <js-constructor>new YAHOO.dev.Kinetic()</js-constructor>
+</widget>

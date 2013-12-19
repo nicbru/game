@@ -1,0 +1,19 @@
+<widget name="scene"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="dev.widgets.Scene"
+        container-positioning="y">
+
+    <attributes>
+        <attribute name="path" type="string" mandatory="y"/>
+        <attribute name="frames" type="number" mandatory="y"/>
+    </attributes>
+    
+    <children allowed="y"/>
+    
+    <includes>
+        <css-include file="scene.css"/>
+        <js-include file="Scene.js"/>
+    </includes>
+    
+    <js-constructor>new YAHOO.dev.Scene()</js-constructor>
+</widget>

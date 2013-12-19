@@ -1,0 +1,16 @@
+.$URN$_scene{
+    position:relative !important;
+    background:url('loader.gif') center no-repeat;
+}
+
+.$URN$_scene-inline-block{
+    display:inline-block;
+}
+
+.$URN$_scene > div{
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+}
