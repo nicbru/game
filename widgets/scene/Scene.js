@@ -27,6 +27,7 @@ YAHOO
             this.content = this.getNamedElement('content');
             
             this.path = this.getAttribute('path');
+            this.extension = this.getAttribute('extension');
             this.framesCount = parseInt(this.getAttribute('frames'));
         },
 
@@ -101,7 +102,7 @@ YAHOO
                 var num = '000'.substring(0, '000'.length - (i+'').length) + i;
 
                 var frame = new Image();
-                frame.src = path+num+'.jpg';
+                frame.src = path+num+'.'+self.extension;
                 var buffer = document.createElement('canvas');
                 buffer.width = window.innerWidth;
                 buffer.height = window.innerHeight;

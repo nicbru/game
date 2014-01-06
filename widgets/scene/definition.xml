@@ -5,6 +5,7 @@
 
     <attributes>
         <attribute name="path" type="string" mandatory="y"/>
+        <attribute name="extension" type="string" default="jpg"/>
         <attribute name="frames" type="number" mandatory="y"/>
     </attributes>
     
