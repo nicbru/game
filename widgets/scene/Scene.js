@@ -74,6 +74,7 @@ YAHOO
                         if(self.prevMoveEvent.type === 'mousedown'){
                             self.container.removeEventListener('mousedown', mousedownHandler, false);
                             self.onEndReached.fireEvent();
+                            YAHOO.util.Dom.removeClass(self.container, 'active');
                         }
                         self.container.removeEventListener('mousemove', mousemoveHandler, false);
                     }
@@ -91,6 +92,7 @@ YAHOO
                     self.container.removeEventListener('mouseup', mouseupHandler, false);
                 }, false);
             }, false);
+            YAHOO.util.Dom.addClass(self.container, 'active');
         },
         
         _loadFrames: function(path, framesCount){

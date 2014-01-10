@@ -14,3 +14,7 @@
     bottom:0;
     right:0;
 }
+
+.$URN$_scene:not(.active){
+    opacity:0.8;
+}
