@@ -2,8 +2,14 @@
         xmlns:app="urn:aviarc:widget:application">
         
      <scene-manager name="manager" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
-        <scene name="scene1" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="69"/>
-        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2" frames="82">
+          <container name="scene1" position="static" width="30%" height="100%">
+             <text-static position="static" text="Navigate to Mars"/>
+        </container> 
+        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="69"/>
+        <container name="scene3" position="static" width="50%" height="100%">
+             <text-static position="static" text="Travel to Mars"/>
+        </container> 
+        <scene name="scene3" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2" frames="82">
             <button position="relative" label="click" margin="20" width="100" height="30">
                 <action:when event="onClick">
                     <action:set-field field="state.button-one-clicked" value="true"/>
@@ -11,6 +17,29 @@
                 </action:when>
             </button>
         </scene>
-        <scene name="scene3" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene4" position="static" width="20%" height="100%">
+             <text-static position="static" text="Feed Crew"/>
+        </container> 
+        <scene name="scene5" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene6" position="static" width="40%" height="100%">
+             <text-static position="static" text="Set up the Colony"/>
+        </container> 
+         <scene name="scene7" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene8" position="static" width="40%" height="100%">
+             <text-static position="static" text="Logistic"/>
+        </container>       
+         <scene name="scene9" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene10" position="static" width="20%" height="100%">
+             <text-static position="static" text="Health of the crew"/>
+        </container> 
+        <scene name="scene11" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene12" position="static" width="20%" height="100%">
+             <text-static position="static" text="Launch spaceship"/>
+        </container> 
+        <scene name="scene13" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>
+         <container name="scene14" position="static" width="50%" height="100%">
+             <text-static position="static" text="Land on Mars"/>
+        </container> 
+ <scene name="scene15" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene3" frames="44"/>        
     </scene-manager>
 </screen>
