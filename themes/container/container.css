@@ -1,0 +1,13 @@
+.$URN$_container-clear-fix:after{
+    content:" ";
+    display:block;
+    clear: both;
+}
+
+.$URN$_container-inline-block{
+    display:inline-block;
+}
+
+.$URN$_container-outline-grey{
+    outline:1px solid #ddd;
+}
