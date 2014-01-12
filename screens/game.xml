@@ -8,7 +8,7 @@
             </container>
         </container>
 
-        <scene position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="40"/>
+        <scene position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="69"/>
         
         <container position="relative" width="50%" height="100%" class="inline-block outline-grey">
             <container position="absolute" offset="0">
