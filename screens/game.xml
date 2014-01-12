@@ -8,7 +8,7 @@
             </container>
         </container>
 
-        <scene position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="40"/>
+        <scene position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene1"  extension="png" frames="69"/>
         
         <container position="relative" width="50%" height="100%" class="inline-block outline-grey">
             <container position="absolute" offset="0">
@@ -16,10 +16,10 @@
             </container>
         </container>
         
-        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2" frames="57">
-            <range name="landing1" start="27" end="58"/>
-            <range name="landing2" start="53" end="58"/>
-            <range name="landing3" start="56" end="58"/>
+        <scene name="scene2" position="static" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2" frames="82">
+            <range name="landing1" start="27" end="83"/>
+            <range name="landing2" start="53" end="83"/>
+            <range name="landing3" start="80" end="83"/>
             <container name="landing1Box" right="50" top="50" width="200" height="100" visible="n" class="north-pole default-cursor"/>
             <container name="landing2Box" right="50" top="200" width="200" height="100" visible="n" class="equator default-cursor"/>
             <container name="landing3Box" right="50" top="350" width="200" height="100" visible="n" class="marineris default-cursor"/>
