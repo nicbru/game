@@ -11,6 +11,16 @@
     
     <children allowed="y"/>
     
+    <sub-elements>
+        <sub-element name="range">
+            <attributes>
+                <attribute name="name" type="name" mandatory="y"/>
+                <attribute name="start" mandatory="y"/>
+                <attribute name="end" mandatory="y" />
+            </attributes>
+        </sub-element>
+    </sub-elements>
+    
     <includes>
         <css-include file="scene.css"/>
         <js-include file="Scene.js"/>

@@ -12,6 +12,7 @@ YAHOO
         this.onLoad = new Toronto.client.Event("Scene onLoad");
         this.inShot = new Toronto.client.Event("Scene inShot");
         this.onEndReached = new Toronto.client.Event("Scene onEndReached");
+        this.onRange = new Toronto.client.Event("Scene onRange");
     
         this.frames = [];
         this.index = 0;
@@ -29,6 +30,7 @@ YAHOO
             this.path = this.getAttribute('path');
             this.extension = this.getAttribute('extension');
             this.framesCount = parseInt(this.getAttribute('frames'));
+            this.ranges = this.getXMLContext().getAllSubElements().hasOwnProperty('range') ? this.getXMLContext().getAllSubElements().range : [];
         },
 
         bind: function (dataContext) {
@@ -81,6 +83,17 @@ YAHOO
                     else{
                         self.canvas.getContext("2d").drawImage(self.frames[(self.index += isMovingLeft ? -1 : 1)].canvas, 0, 0, window.innerWidth, window.innerHeight);
                         self.prevMoveEvent = event;
+                        
+                        for(var i = 0;i < self.ranges.length;i++){
+                            var start = parseInt(self.ranges[i].getAttribute('start')) === self.index;
+                            var end = parseInt(self.ranges[i].getAttribute('end')) === self.index;
+                            if(start || end){
+                                self.onRange.fireEvent({
+                                    'name': self.ranges[i].getAttribute('name'),
+                                    'inRange': start && !isMovingLeft || end && isMovingLeft
+                                });
+                            }
+                        }
                     }
                 }
 

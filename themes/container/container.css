@@ -11,3 +11,20 @@
 .$URN$_container-outline-grey{
     outline:1px solid #ddd;
 }
+
+.$URN$_container-north-pole{
+    background-color:#D3E3F3;
+    box-shadow:-4px -4px 0 #CC34B4;
+}
+.$URN$_container-equator{
+    background-color:#3E2A2B;
+    box-shadow:-4px -4px 0 #C5862F;
+}
+.$URN$_container-marineris{
+    background-color:#C9DC8A;
+    box-shadow:-4px -4px 0 #3D423A;
+}
+
+.$URN$_container-default-cursor{
+    cursor: default;
+}
