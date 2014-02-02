@@ -1,0 +1,5 @@
+<workflow>
+    <menu-item name="lvl-one/start">
+        <show-screen name="lvl-one/main"/>
+    </menu-item>
+</workflow>

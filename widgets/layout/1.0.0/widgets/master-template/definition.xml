@@ -1,0 +1,4 @@
+<widget name="master-template"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes></attributes>
+    <children allowed="n"/>
+</widget>

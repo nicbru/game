@@ -1,0 +1,18 @@
+<screen>
+    <container position="absolute" left="50%" margin-left="-150" top="50%" margin-top="-50" width="300" height="100" class="clear-fix">
+        <button name="lvlOne" label="Lvl 1" position="static" width="100" height="100" float="left"/>
+        <button name="lvlTwo" label="Lvl 2" position="static" width="100" height="100" float="left"/>
+        <button name="lvlThree" label="Lvl 3" position="static" width="100" height="100" float="left"/>
+    </container>
+    <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+        <when event="lvlOne.onClick">
+            <call-ajax-workflow name="lvl-one/start" show-timer="n"/>
+        </when>
+        <when event="lvlTwo.onClick">
+            <call-ajax-workflow name="lvl-two/start" show-timer="n"/>
+        </when>
+        <when event="lvlThree.onClick">
+            <call-ajax-workflow name="lvl-three/start" show-timer="n"/>
+        </when>
+    </behaviors>
+</screen>

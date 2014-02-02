@@ -1,0 +1,22 @@
+<container
+    name="{@name}-container"
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    class="{@class}">
+    <content/>
+</container>

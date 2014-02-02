@@ -1,0 +1,8 @@
+<widget name="edge-detecting-container"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes></attributes>
+    <children allowed="y"/>
+    <includes>
+        <js-include file="EdgeDetectingContainer.js"/>
+    </includes>
+    <js-constructor>new YAHOO.game.EdgeDetectingContainer()</js-constructor>
+</widget>

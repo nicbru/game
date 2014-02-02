@@ -1,0 +1,7 @@
+<screen xmlns:layout="urn:aviarc:widget:layout">
+    <layout:master-template position="static">
+        <content id="main">
+            
+        </content>
+    </layout:master-template>
+</screen>

@@ -1,3 +1,5 @@
 <workflow>
-    <show-screen name="game"/>
+    <menu-marker>
+        <show-screen name="menu"/>
+    </menu-marker>
 </workflow>

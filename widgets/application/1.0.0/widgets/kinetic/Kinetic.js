@@ -54,7 +54,11 @@ YAHOO
         },
         
         adjustScrollLeft: function(adjustment){
-            $(this.container).stop().animate({scrollLeft: (this.container.scrollLeft + parseInt(adjustment))}, 200);
+            var self = this;
+            $(this.container).kinetic('update', {'x': false, 'y': false});
+            $(this.container).stop().animate({scrollLeft: (this.container.scrollLeft + parseInt(adjustment))}, 100, function(){
+                $(self.container).kinetic('update', {'x': self.xAxis, 'y': self.yAxis});
+            });
         },
         
         setX: function(x){
