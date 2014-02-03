@@ -1,0 +1,9 @@
+<databroker factory-class="com.aviarc.framework.databroker.datasetfile.DatasetFileDataBrokerFactoryImpl">
+    <populate-operation name="get-user-by-email">
+        <parameters>
+            <parameter name="email" mandatory="y"/>
+        </parameters>
+        <workflow-result workflow="workflows/user-get-user-by-email"/>
+    </populate-operation>
+</databroker>
+

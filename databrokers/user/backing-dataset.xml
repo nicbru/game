@@ -1,0 +1,8 @@
+<dataset name="backing-dataset">
+    <row>
+        <field name="email" value="john@smith.com"/>
+        <field name="first-name" value="John"/>
+        <field name="last-name" value="Smith"/>
+        <field name="password" value="pass123"/>
+    </row>
+</dataset>

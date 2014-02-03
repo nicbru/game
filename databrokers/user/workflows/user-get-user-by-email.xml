@@ -1,0 +1,15 @@
+<workflow>
+    <debug dataset="context"/>
+    <debug dataset="parameters"/>
+    <dataset-iterator dataset="{$context.internal-dataset-name}">
+        <if>
+            <condition test="equal" value1="{${$context.internal-dataset-name}.email}" value2="{$parameters.email}"/>
+            <then>
+                <create-row dataset="{$context.populate-dataset-name}"/>
+                <set-field field="{$context.populate-dataset-name}.email" value="{${$context.internal-dataset-name}.email}"/>
+                <set-field field="{$context.populate-dataset-name}.first-name" value="{${$context.internal-dataset-name}.first-name}"/>
+                <set-field field="{$context.populate-dataset-name}.last-name" value="{${$context.internal-dataset-name}.last-name}"/>
+            </then>
+        </if>
+    </dataset-iterator>
+</workflow>
