@@ -30,6 +30,9 @@ YAHOO
             this.extension = this.getAttribute('extension');
             this.framesCount = parseInt(this.getAttribute('frames'));
             this.ranges = this.getXMLContext().getAllSubElements().hasOwnProperty('range') ? this.getXMLContext().getAllSubElements().range : [];
+            
+            this.threshold = parseInt(this.getAttribute('threshold'));
+            this.current = 0;
         },
 
         bind: function (dataContext) {
@@ -61,7 +64,7 @@ YAHOO
                         }
                         self.container.removeEventListener('mousemove', mousemoveHandler, false);
                     }
-                    else{
+                    else if(self.current++ === self.threshold){
                         self.canvas.getContext("2d").drawImage(self.frames[(self.index += isMovingLeft ? -1 : 1)].canvas, 0, 0, window.innerWidth, window.innerHeight);
                         self.prevMoveEvent = event;
                         
@@ -75,6 +78,7 @@ YAHOO
                                 });
                             }
                         }
+                        self.current = 0;
                     }
                 }
 

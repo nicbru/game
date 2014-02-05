@@ -7,6 +7,7 @@
         <attribute name="path" type="string" mandatory="y"/>
         <attribute name="extension" type="string" default="jpg"/>
         <attribute name="frames" type="number" mandatory="y"/>
+        <attribute name="threshold" type="number" default="2"/>
     </attributes>
     
     <children allowed="y"/>
@@ -16,7 +17,7 @@
             <attributes>
                 <attribute name="name" type="name" mandatory="y"/>
                 <attribute name="start" mandatory="y"/>
-                <attribute name="end" mandatory="y" />
+                <attribute name="end" mandatory="y"/>
             </attributes>
         </sub-element>
     </sub-elements>

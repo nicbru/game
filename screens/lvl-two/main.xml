@@ -108,6 +108,9 @@
                     <call-widget-method method="kinetic.setX" value1="n"/>
                     <call-widget-method method="stage4Scene.bindDragListener"/>
                 </when>
+                <when event="stage4Scene.onEndReached">
+                    <call-widget-method method="kinetic.setX" value1="y"/>
+                </when>
                 <when event="status5.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
                 </when>
