@@ -1,0 +1,25 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    xmlns:support="urn:aviarc:widget:support">
+    <support:datacontext workflow="composition/status/init">
+        <repeater scroll-to-new="n" auto-refresh="n" show-timer="n" dataset="stages">
+            <text-static position="static" text="{$stages.name}" height="60" class="lineHeight60" padding-left="20"/>
+        </repeater>
+    </support:datacontext>
+</container>

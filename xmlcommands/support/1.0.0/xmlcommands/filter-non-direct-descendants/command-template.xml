@@ -1,0 +1,51 @@
+<do xmlns:support="urn:aviarc:xmlcommand:support" xmlns:math="urn:aviarc:xmlcommand:com.aviarc.math">
+    <with-datasets>
+        <dataset name="_helper"/>
+        <create-row dataset="_helper"/>
+        <set-field field="_helper.parent-dataset-name">
+            <support:get-parent-dataset-name dataset="{@dataset}"/>
+        </set-field>
+        <if>
+            <and>
+                <not-condition test="dataset-empty" value1="{@dataset}"/>
+                <not-condition test="equal" value1="{$_helper.parent-dataset-name}" value2=""/>
+            </and>
+            <then>
+                <support:dataset-last dataset="{@dataset}"/>
+                <get-current-row dataset="{@dataset}" field="_helper.index"/>
+                <while>
+                    <condition test="greater-equal" value1="{$_helper.index}" value2="0" convert="number"/>
+                    <do>
+                        <set-current-row dataset="{@dataset}" position="{$_helper.index}"/>
+
+                        <set-field field="_helper.is-direct-descendant" value="false"/>
+                        <dataset-iterator dataset="{$_helper.parent-dataset-name}">
+                            <if>
+                                <condition test="equal" value1="{${$_helper.parent-dataset-name}.{@parent-field}}" value2="{${@dataset}.{@child-field}}"/>
+                                <then>
+                                    <set-field field="_helper.is-direct-descendant" value="true"/>
+                                    <support:dataset-last dataset="{$_helper.parent-dataset-name}"/>
+                                </then>
+                            </if>
+                        </dataset-iterator>
+                        
+                        <if>
+                            <condition test="equal" value1="{$_helper.is-direct-descendant}" value2="false" convert="boolean"/>
+                            <then>
+                                <delete-row dataset="{@dataset}"/>
+                            </then>
+                        </if>
+                        
+                        <set-field field="_helper.index">
+                            <math:subtract>
+                                <math:integer value="{$_helper.index}"/>
+                                <math:integer value="1"/>
+                            </math:subtract>
+                        </set-field>
+                    </do>
+                </while>
+                <dataset-reset dataset="{$_helper.parent-dataset-name}"/>
+            </then>
+        </if>
+    </with-datasets>
+</do>

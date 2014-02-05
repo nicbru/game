@@ -1,0 +1,5 @@
+<xml-command name="dataset-last" classname="game.xmlcommands.DatasetLast">
+    <attributes>
+        <attribute name="dataset" type="dataset" mandatory="y"/>
+    </attributes>
+</xml-command>

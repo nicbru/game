@@ -1,0 +1,8 @@
+<workflow xmlns:dataset="urn:aviarc:xmlcommand:com.aviarc.dataset">
+    <dataset-iterator dataset="{$context.internal-dataset-name}">
+        <create-row dataset="{$context.populate-dataset-name}"/>
+        <dataset:field-iterator dataset="{$context.internal-dataset-name}" value-field="var.value-field" name-field="var.field-name">
+            <set-field field="{$context.populate-dataset-name}.{$var.field-name}" value="{$var.value-field}"/>
+        </dataset:field-iterator>
+    </dataset-iterator>
+</workflow>

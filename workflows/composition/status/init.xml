@@ -1,0 +1,5 @@
+<do>
+    <dataset name="_status"/>
+    <create-row dataset="_status"/>
+    <dataset name="stages" databinding="stage" query="get-all"/>
+</do>

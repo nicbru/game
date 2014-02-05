@@ -1,0 +1,14 @@
+.$URN$_text-static {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+}
+
+.$URN$_text-static-disabled {
+    color: rgb(150,150,150);
+}
+
+.$URN$_text-static-lineHeight60 {
+    line-height:60px;
+}

@@ -2,11 +2,5 @@
     <populate-operation name="get-all">
         <workflow-result workflow="workflows/get-all"/>
     </populate-operation>
-    <populate-operation name="get-all-by-email">
-        <parameters>
-            <parameter name="email" mandatory="y"/>
-        </parameters>
-        <workflow-result workflow="workflows/get-all-by-email"/>
-    </populate-operation>
 </databroker>
 

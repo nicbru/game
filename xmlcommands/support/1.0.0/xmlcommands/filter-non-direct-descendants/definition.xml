@@ -1,0 +1,7 @@
+<xml-command name="filter-non-direct-descendants">
+    <attributes>
+        <attribute name="dataset" type="dataset" mandatory="y"/>
+        <attribute name="parent-field" type="string" mandatory="y"/>
+        <attribute name="child-field" type="string" mandatory="y"/>
+    </attributes>
+</xml-command>

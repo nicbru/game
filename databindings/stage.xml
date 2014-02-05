@@ -1,0 +1,12 @@
+<databinding
+    factory-class="com.aviarc.framework.databinding.basic.BasicDataBindingFactoryImpl"
+    databroker="stage">
+    <populate-operation name="get-all" broker-operation="get-all">
+        <child-dataset name="options" databinding="option">
+            <populate-operation operation="get-all">
+                <parameter name="filter-non-direct-descendants" value="true"/>
+                <link-parent-rows parent-field="id" child-field="parent-id"/>
+            </populate-operation>
+        </child-dataset>
+    </populate-operation>
+</databinding>
