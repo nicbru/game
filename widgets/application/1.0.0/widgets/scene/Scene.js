@@ -10,7 +10,6 @@ YAHOO
     dev.Scene = function() {
         
         this.onLoad = new Toronto.client.Event("Scene onLoad");
-        this.inShot = new Toronto.client.Event("Scene inShot");
         this.onEndReached = new Toronto.client.Event("Scene onEndReached");
         this.onRange = new Toronto.client.Event("Scene onRange");
     
@@ -41,27 +40,9 @@ YAHOO
             this.canvas.width = this.container.offsetWidth;
             this.canvas.height = this.container.offsetHeight;
             this._loadFrames(this.path, this.framesCount);
-            if(this.container.getBoundingClientRect().left === 0){
-                this.inShot.fireEvent({
-                    'left': 0
-                });
-                this._bindDragListener();
-            }
         },
         
-        update: function(isMovingLeft){
-        
-            var left = this.container.getBoundingClientRect().left;
-
-            if((!parseBoolean(isMovingLeft) && left >= 0 && left <= 60) || (parseBoolean(isMovingLeft) && left <= 0 && left >= -60)){
-                this.inShot.fireEvent({
-                    'left': left
-                });
-                this._bindDragListener();
-            }
-        },
-        
-        _bindDragListener: function(){
+        bindDragListener: function(){
         
             var self = this;
 

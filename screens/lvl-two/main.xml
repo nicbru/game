@@ -37,11 +37,11 @@
                         <text-static position="static" text="status"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
+                <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
+                        <scene name="stage4Scene" position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2"  extension="jpg" frames="82"/>
                     </container>
-                </container>
+                </edge-detecting-container>
                 <edge-detecting-container name="status5" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <text-static position="static" text="status"/>
@@ -88,6 +88,7 @@
                     <call-widget-method method="status2.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status3.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status4.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                    <call-widget-method method="stage4.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status5.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status6.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status7.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
@@ -101,6 +102,11 @@
                 </when>
                 <when event="status4.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                </when>
+                <when event="stage4.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                    <call-widget-method method="kinetic.setX" value1="n"/>
+                    <call-widget-method method="stage4Scene.bindDragListener"/>
                 </when>
                 <when event="status5.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
