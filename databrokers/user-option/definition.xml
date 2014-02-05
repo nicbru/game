@@ -1,7 +1,4 @@
 <databroker factory-class="com.aviarc.framework.databroker.datasetfile.DatasetFileDataBrokerFactoryImpl">
-    <populate-operation name="get-all">
-        <workflow-result workflow="workflows/get-all"/>
-    </populate-operation>
     <populate-operation name="get-all-by-user-id">
         <parameters>
             <parameter name="user-id" mandatory="y"/>

@@ -1,0 +1,20 @@
+<workflow xmlns:dataset="urn:aviarc:xmlcommand:com.aviarc.dataset">
+
+    <dataset name="user-option-joins" databroker="user-option" query="get-all-by-user-id">
+        <param name="user-id" value="{$parameters.user-id}"/>
+    </dataset>
+    
+    <dataset-iterator dataset="user-option-joins">
+        <dataset-iterator dataset="{$context.internal-dataset-name}">
+            <if>
+                <condition test="equal" value1="{${$context.internal-dataset-name}.id}" value2="{$user-option-joins.option-id}"/>
+                <then>
+                    <create-row dataset="{$context.populate-dataset-name}"/>
+                    <dataset:field-iterator dataset="{$context.internal-dataset-name}" value-field="var.value-field" name-field="var.field-name">
+                        <set-field field="{$context.populate-dataset-name}.{$var.field-name}" value="{$var.value-field}"/>
+                    </dataset:field-iterator>
+                </then>
+            </if>
+        </dataset-iterator>
+    </dataset-iterator>
+</workflow>

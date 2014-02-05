@@ -1,0 +1,12 @@
+<widget name="render-if" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl" rendered-node-factory="If"
+    container-positioning="n">
+
+    <attributes>
+        <attribute name="test" type="string" mandatory="n" runtime="y" default="equals"/>
+        <attribute name="value1" type="string" mandatory="y" runtime="y" />
+        <attribute name="value2" type="string" mandatory="y" runtime="y" />
+        <attribute name="convert" type="string" mandatory="n" runtime="y" />
+    </attributes>
+
+    <children allowed="y" />
+</widget>

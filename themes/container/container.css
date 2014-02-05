@@ -28,3 +28,7 @@
 .$URN$_container-default-cursor{
     cursor: default;
 }
+
+.$URN$_container-selected{
+    background-color:#e6917e;
+}

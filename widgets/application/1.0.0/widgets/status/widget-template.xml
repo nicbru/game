@@ -16,10 +16,34 @@
     padding-bottom="{@padding-bottom}"
     padding-left="{@padding-left}"
     padding-right="{@padding-right}"
-    xmlns:support="urn:aviarc:widget:support">
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
     <support:datacontext workflow="composition/status/init">
-        <repeater scroll-to-new="n" auto-refresh="n" show-timer="n" dataset="stages">
-            <text-static position="static" text="{$stages.name}" height="60" class="lineHeight60" padding-left="20"/>
+        <repeater name="{@name}-statusList" scroll-to-new="n" auto-refresh="n" show-timer="n" dataset="stages">
+            <container position="static" class="clear-fix outline-grey {$stages._selected-class}">
+                <text-static position="static" text="CHOOSE" height="20" padding-left="20"/>
+                <text-static position="static" text="your" height="10" padding-left="20"/>
+                <text-static position="static" text="{$stages.name}" height="20" padding-left="20"/>
+            </container>
         </repeater>
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when>
+                <events>
+                    <system-event event="onBindComplete"/>
+                    <dataset-event event="stages.onContentsReplaced"/>
+                </events>
+                <dataset:dataset-iterator dataset="stages">
+                    <dataset:dataset-iterator dataset="options">
+                        <if>
+                            <condition test="equal" value1="{$stages.id}" value2="{$options.parent-id}"/>
+                            <then>
+                                <set-field field="stages._selected-class" value="selected"/>
+                            </then>
+                        </if>
+                    </dataset:dataset-iterator>
+                </dataset:dataset-iterator>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+        </behaviors>
     </support:datacontext>
 </container>

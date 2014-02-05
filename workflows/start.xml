@@ -1,8 +1,10 @@
 <workflow>
+
+    <dataset name="users" databroker="user" query="get-all-by-email">
+        <param name="email" value="john@smith.com"/>
+    </dataset>
+    
     <menu-marker>
-        <dataset name="users" databroker="user" query="get-all-by-email">
-            <param name="email" value="john@smith.com"/>
-        </dataset>
         <show-screen name="menu"/>
     </menu-marker>
 </workflow>

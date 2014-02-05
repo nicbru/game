@@ -1,0 +1,6 @@
+<do xmlns:support="urn:aviarc:xmlcommand:support">
+    <refresh-dataset name="stages" query="get-all"/>
+    <refresh-dataset name="options" query="get-all-by-user-id">
+        <param name="user-id" value="{$users.id}"/>
+    </refresh-dataset>
+</do>
