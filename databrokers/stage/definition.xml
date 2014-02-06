@@ -1,6 +1,14 @@
 <databroker factory-class="com.aviarc.framework.databroker.datasetfile.DatasetFileDataBrokerFactoryImpl">
+
     <populate-operation name="get-all">
         <workflow-result workflow="workflows/get-all"/>
+    </populate-operation>
+    
+    <populate-operation name="get-all-by-name">
+        <parameters>
+            <parameter name="name" mandatory="y"/>
+        </parameters>
+        <workflow-result workflow="workflows/get-all-by-name"/>
     </populate-operation>
 </databroker>
 

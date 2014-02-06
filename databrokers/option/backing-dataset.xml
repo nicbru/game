@@ -17,4 +17,22 @@
         <field name="label" value=""/>
         <field name="value" value=""/>
     </row>
+    <row>
+        <field name="id" value="e0206679-9a3e-42cc-8a6f-acf2615f4e05"/>
+        <field name="parent-id" value="d3177147-3146-4444-a7a7-9d1cbaca8bd0"/>
+        <field name="label" value="Site One"/>
+        <field name="value" value="siteOne"/>
+    </row>
+    <row>
+        <field name="id" value="01cae174-3d7f-4729-be85-42cf0720335e"/>
+        <field name="parent-id" value="d3177147-3146-4444-a7a7-9d1cbaca8bd0"/>
+        <field name="label" value="Site Two"/>
+        <field name="value" value="siteTwo"/>
+    </row>
+    <row>
+        <field name="id" value="00fe8292-6bed-42fa-bd7f-427742bb8a57"/>
+        <field name="parent-id" value="d3177147-3146-4444-a7a7-9d1cbaca8bd0"/>
+        <field name="label" value="Site Three"/>
+        <field name="value" value="siteThree"/>
+    </row>
 </dataset>

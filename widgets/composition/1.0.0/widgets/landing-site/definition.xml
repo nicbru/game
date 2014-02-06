@@ -1,8 +1,9 @@
 <widget name="landing-site"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
-    <attributes></attributes>
+    <attributes>
+        <attribute name="stage-name" type="string" default="Landing Site"/>
+    </attributes>
     <children allowed="n"/>
     <includes>
-        <css-include file="landing-site.css"/>
         <js-include file="LandingSite.js"/>
     </includes>
     <js-constructor>new YAHOO.game.LandingSite()</js-constructor>

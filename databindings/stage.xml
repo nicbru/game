@@ -9,4 +9,13 @@
             </populate-operation>
         </child-dataset>
     </populate-operation>
+    
+    <populate-operation name="get-all-by-name" broker-operation="get-all-by-name">
+        <child-dataset name="options" databinding="option">
+            <populate-operation operation="get-all">
+                <parameter name="filter-non-direct-descendants" value="true"/>
+                <link-parent-rows parent-field="id" child-field="parent-id"/>
+            </populate-operation>
+        </child-dataset>
+    </populate-operation>
 </databinding>

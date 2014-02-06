@@ -1,1 +1,5 @@
-<do/>
+<do>
+    <dataset name="stages" databinding="stage" query="get-all-by-name">
+        <param name="name" value="{$parameters.stage-name}"/>
+    </dataset>
+</do>
