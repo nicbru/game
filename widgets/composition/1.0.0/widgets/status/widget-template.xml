@@ -27,11 +27,15 @@
             </container>
         </repeater>
         <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
-            <when>
-                <events>
-                    <system-event event="onBindComplete"/>
-                    <dataset-event event="stages.onContentsReplaced"/>
-                </events>
+            <when system-event="onBindComplete">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <when dataset-event="stages.onContentsReplaced">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <action name="{@name}-add-selected-class">
                 <dataset:dataset-iterator dataset="stages">
                     <dataset:dataset-iterator dataset="options">
                         <if>
@@ -42,8 +46,7 @@
                         </if>
                     </dataset:dataset-iterator>
                 </dataset:dataset-iterator>
-                <call-widget-method method="{@name}-statusList.rerender"/>
-            </when>
+            </action>
         </behaviors>
     </support:datacontext>
 </container>

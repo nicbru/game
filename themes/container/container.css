@@ -13,7 +13,7 @@
 }
 
 .$URN$_container-dark{
-    background-color:rgba(88, 87, 84, 0.6);
+    background-color:rgba(88, 87, 84, 0.8);
 }
 
 .$URN$_container-default-cursor{
@@ -22,4 +22,8 @@
 
 .$URN$_container-selected{
     background-color:#e6917e;
+}
+
+.$URN$_container-rounded{
+    border-radius:2px;
 }

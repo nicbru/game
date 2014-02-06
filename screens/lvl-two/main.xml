@@ -1,10 +1,10 @@
-<screen xmlns:layout="urn:aviarc:widget:layout">
+<screen xmlns:layout="urn:aviarc:widget:layout" xmlns:composition="urn:aviarc:widget:composition">
     <layout:master-template left="0" top="0" bottom="0" right="0">
         <content id="main">
             <kinetic name="kinetic" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
                 <container name="status1" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -12,7 +12,7 @@
                 </container>
                 <edge-detecting-container name="status2" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -20,7 +20,7 @@
                 </container>
                 <edge-detecting-container name="status3" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -28,7 +28,7 @@
                 </container>
                 <edge-detecting-container name="status4" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block">
@@ -37,13 +37,13 @@
                             <range name="landing1" start="1" end="53"/>
                             <range name="landing2" start="53" end="80"/>
                             <range name="landing3" start="80" end="82"/>
-                            <container name="landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
+                            <container name="landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
                                 <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
-                            <container name="landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
+                            <container name="landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
                                 <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
-                            <container name="landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
+                            <container name="landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
                                 <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
                         </scene>
@@ -51,7 +51,7 @@
                 </edge-detecting-container>
                 <edge-detecting-container name="status5" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -59,7 +59,7 @@
                 </container>
                 <edge-detecting-container name="status6" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -67,7 +67,7 @@
                 </container>
                 <edge-detecting-container name="status7" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
@@ -75,7 +75,7 @@
                 </container>
                 <edge-detecting-container name="status8" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <status left="0" top="100" bottom="0" right="0"/>
+                        <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
                 <container position="relative" width="100%" height="100%" class="inline-block">
