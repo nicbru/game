@@ -33,20 +33,7 @@
                 </edge-detecting-container>
                 <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block">
                     <container position="absolute" offset="0">
-                        <scene name="stage4Scene" position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2"  extension="jpg" frames="82">
-                            <range name="landing1" start="1" end="53"/>
-                            <range name="landing2" start="53" end="80"/>
-                            <range name="landing3" start="80" end="82"/>
-                            <container name="landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-                            </container>
-                            <container name="landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-                            </container>
-                            <container name="landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-                            </container>
-                        </scene>
+                        <composition:landing-site name="landingSite" width="100%" height="100%" class="inline-block"/>
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="status5" position="relative" width="200" height="100%" class="inline-block outline-grey">
@@ -105,7 +92,7 @@
                 <when event="stage4.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
                     <call-widget-method method="kinetic.setX" value1="n"/>
-                    <call-widget-method method="stage4Scene.bindDragListener"/>
+                    <call-widget-method method="landingSite.bindDragListener"/>
                 </when>
                 <when event="stage4Scene.onEndReached">
                     <call-widget-method method="kinetic.setX" value1="y"/>
@@ -121,17 +108,6 @@
                 </when>
                 <when event="status8.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
-                </when>
-                <when event="stage4Scene.onRange">
-                    <if>
-                        <condition test="equal" value1="{$event-parameters.inRange}" value2="true"/>
-                        <then>
-                            <call-widget-method method="{$event-parameters.name}Box.show"/>
-                        </then>
-                        <else>
-                            <call-widget-method method="{$event-parameters.name}Box.hide"/>
-                        </else>
-                    </if>
                 </when>
             </behaviors>
         </content>

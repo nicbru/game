@@ -1,0 +1,53 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    class="{@class}"
+    xmlns:support="urn:aviarc:widget:support">
+    <support:datacontext>
+        <scene name="{@name}-stage4Scene" position="relative" width="100%" height="100%" path="/aviarc/game/www/img/scene2" extension="jpg" frames="82">
+            <range name="{@name}-landing1" start="1" end="53"/>
+            <range name="{@name}-landing2" start="53" end="80"/>
+            <range name="{@name}-landing3" start="80" end="82"/>
+            <container name="{@name}-landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
+                <button label="Select" bottom="20" right="20" width="80" height="40"/>
+            </container>
+            <container name="{@name}-landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
+                <button label="Select" bottom="20" right="20" width="80" height="40"/>
+            </container>
+            <container name="{@name}-landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
+                <button label="Select" bottom="20" right="20" width="80" height="40"/>
+            </container>
+        </scene>
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when widget-event="{@name}.onBindDragListener">
+                <call-widget-method method="{@name}-stage4Scene.bindDragListener"/>
+            </when>
+            <when event="{@name}-stage4Scene.onRange">
+                <if>
+                    <condition test="equal" value1="{$event-parameters.inRange}" value2="true"/>
+                    <then>
+                        <call-widget-method method="{$event-parameters.name}Box.show"/>
+                    </then>
+                    <else>
+                        <call-widget-method method="{$event-parameters.name}Box.hide"/>
+                    </else>
+                </if>
+            </when>
+        </behaviors>
+    </support:datacontext>
+</container>
