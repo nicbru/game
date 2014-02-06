@@ -18,7 +18,7 @@
     padding-right="{@padding-right}"
     class="{@class}"
     xmlns:support="urn:aviarc:widget:support">
-    <support:datacontext>
+    <support:datacontext workflow="composition/landing-site/init">
         <scene name="{@name}-stage4Scene" position="relative" width="100%" height="100%" path="/aviarc/game/www/img/scene2" extension="jpg" frames="82">
             <range name="{@name}-landing1" start="1" end="53"/>
             <range name="{@name}-landing2" start="53" end="80"/>
