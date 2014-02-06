@@ -48,6 +48,9 @@
                     </else>
                 </if>
             </when>
+            <when event="{@name}-stage4Scene.onEndReached">
+                <call-widget-method method="{@name}.endReached"/>
+            </when>
         </behaviors>
     </support:datacontext>
 </container>

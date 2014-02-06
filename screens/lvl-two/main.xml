@@ -94,7 +94,7 @@
                     <call-widget-method method="kinetic.setX" value1="n"/>
                     <call-widget-method method="landingSite.bindDragListener"/>
                 </when>
-                <when event="stage4Scene.onEndReached">
+                <when event="landingSite.onEndReached">
                     <call-widget-method method="kinetic.setX" value1="y"/>
                 </when>
                 <when event="status5.edgeDetected">

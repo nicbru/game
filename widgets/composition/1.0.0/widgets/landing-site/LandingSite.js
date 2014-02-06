@@ -9,6 +9,7 @@ YAHOO
 
     game.LandingSite = function() {
         this.onBindDragListener = new Toronto.client.Event();
+        this.onEndReached = new Toronto.client.Event();
     };
 
     YAHOO.lang.extend(game.LandingSite, Toronto.framework.DefaultTemplateWidgetImpl, {
@@ -27,6 +28,16 @@ YAHOO
         bindDragListener: function(value1, value2, value3, value4){
         
             this.onBindDragListener.fireEvent({
+                'value1': value1,
+                'value2': value2,
+                'value3': value3,
+                'value4': value4
+            });
+        },
+        
+        endReached: function(value1, value2, value3, value4){
+        
+            this.onEndReached.fireEvent({
                 'value1': value1,
                 'value2': value2,
                 'value3': value3,
