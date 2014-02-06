@@ -1,8 +1,8 @@
 <screen>
     <container position="absolute" left="50%" margin-left="-156" top="50%" margin-top="-32" width="312" height="64" class="clear-fix">
-        <button name="lvlOne" label="Lvl 1" position="static" width="80" height="40" margin="10" float="left"/>
+        <button name="lvlOne" label="Lvl 1" position="static" width="80" height="40" margin="10" float="left" enabled="n"/>
         <button name="lvlTwo" label="Lvl 2" position="static" width="80" height="40" margin="10" float="left"/>
-        <button name="lvlThree" label="Lvl 3" position="static" width="80" height="40" margin="10" float="left"/>
+        <button name="lvlThree" label="Lvl 3" position="static" width="80" height="40" margin="10" float="left" enabled="n"/>
     </container>
     <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
         <when event="lvlOne.onClick">

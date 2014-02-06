@@ -2,6 +2,16 @@
     border:2px solid #f7f7f7;
     border-radius:2px;
     background-color:#7c9aa6;
+}.$URN$_button:hover{
+    background-color:#8BACBA;
+}
+
+.$URN$_button-disabled{
+    border:2px solid #f7f7f7;
+    border-radius:2px;
+    background-color:#909FA5;
+}.$URN$_button-disabled:hover{
+    background-color:#9AA2A5;
 }
 
 .$URN$_button > a.button-anchor{
@@ -10,11 +20,9 @@
     width:100%;
     height:100%;
     outline:none;
-    color:#f7f7f7;
 }
 
-
-.$URN$_button > a.button-anchor > span.button-container{
+.$URN$_button > a.button-anchor > span.button-container, .$URN$_button > span.button-disabled-span{
     position:absolute;
     top:50%;
     margin-top:-7px;
@@ -23,4 +31,5 @@
     line-height:14px;
     text-align:center;
     font-weight:bold;
+    color:#f7f7f7;
 }
