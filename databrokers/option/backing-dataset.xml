@@ -1,23 +1,5 @@
 <dataset name="backing-dataset">
     <row>
-        <field name="id" value="b64ac8ab-203e-4356-8d22-797a9ef88366"/>
-        <field name="parent-id" value="a346ad83-b658-4a25-a2b9-a406018311d4"/>
-        <field name="label" value=""/>
-        <field name="value" value=""/>
-    </row>
-    <row>
-        <field name="id" value="51b7aa2e-d5b2-4620-aa94-fae74a467160"/>
-        <field name="parent-id" value="a346ad83-b658-4a25-a2b9-a406018311d4"/>
-        <field name="label" value=""/>
-        <field name="value" value=""/>
-    </row>
-    <row>
-        <field name="id" value="f7fc9b0b-8152-4230-8abf-536b4083b0c7"/>
-        <field name="parent-id" value=""/>
-        <field name="label" value=""/>
-        <field name="value" value=""/>
-    </row>
-    <row>
         <field name="id" value="e0206679-9a3e-42cc-8a6f-acf2615f4e05"/>
         <field name="parent-id" value="d3177147-3146-4444-a7a7-9d1cbaca8bd0"/>
         <field name="label" value="Site One"/>
