@@ -44,13 +44,13 @@
                             <range name="landing2" start="53" end="80"/>
                             <range name="landing3" start="80" end="82"/>
                             <container name="landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
-                                <button label="Select" position="relative" width="100" height="60"/>
+                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
                             <container name="landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
-                                <button label="Select" position="relative" width="100" height="60"/>
+                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
                             <container name="landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor">
-                                <button label="Select" position="relative" width="100" height="60"/>
+                                <button label="Select" bottom="20" right="20" width="80" height="40"/>
                             </container>
                         </scene>
                     </container>
