@@ -7,37 +7,31 @@
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status2" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status3" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status4" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block outline-grey">
+                <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block">
                     <container position="absolute" offset="0">
                         <scene name="stage4Scene" position="relative" width="100%" height="100%" class="inline-block" path="/aviarc/game/www/img/scene2"  extension="jpg" frames="82">
                             <range name="landing1" start="1" end="53"/>
@@ -60,40 +54,32 @@
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status6" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status7" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
                 <edge-detecting-container name="status8" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <container position="relative" width="100%" height="100%" class="inline-block outline-grey">
-                    <container position="absolute" offset="0">
-                        <text-static position="static" text="scene"/>
-                    </container>
+                <container position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0"></container>
                 </container>
             </kinetic>
             <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
