@@ -17,24 +17,21 @@
     padding-left="{@padding-left}"
     padding-right="{@padding-right}"
     class="{@class}"
-    xmlns:support="urn:aviarc:widget:support">
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
     <support:datacontext workflow="composition/landing-site/init">
         <support:parameters>
             <support:param name="stage-name" value="{@stage-name}"/>
         </support:parameters>
         <scene name="{@name}-stage4Scene" position="relative" width="100%" height="100%" path="/aviarc/game/www/img/scene2" extension="jpg" frames="82">
-            <range name="{@name}-landing1" start="1" end="53"/>
-            <range name="{@name}-landing2" start="53" end="80"/>
-            <range name="{@name}-landing3" start="80" end="82"/>
-            <container name="{@name}-landing1Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-            </container>
-            <container name="{@name}-landing2Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-            </container>
-            <container name="{@name}-landing3Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                <button label="Select" bottom="20" right="20" width="80" height="40"/>
-            </container>
+            <repeater dataset="stages/options" scroll-to-new="n" auto-refresh="n" show-timer="n">
+                <container name="{@name}-{$stages/options.value}Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
+                    <button label="Select" bottom="20" right="20" width="80" height="40"/>
+                </container>
+                <action:when system-event="onBindComplete">
+                    <action:call-widget-method method="{@name}-stage4Scene.registerRange" value1="{@name}-{$stages/options.value}Box" value2="{$stages/options.range-start}" value3="{$stages/options.range-end}"/>
+                </action:when>
+            </repeater>
         </scene>
         <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
             <when widget-event="{@name}.onBindDragListener">
@@ -44,10 +41,16 @@
                 <if>
                     <condition test="equal" value1="{$event-parameters.inRange}" value2="true"/>
                     <then>
-                        <call-widget-method method="{$event-parameters.name}Box.show"/>
+                        <set-field field="_landing-site.landingBoxName">
+                            <support:get-namespaced-widget-name widget="{$event-parameters.name}"/>
+                        </set-field>
+                        <call-widget-method method="{$_landing-site.landingBoxName}.show"/>
                     </then>
                     <else>
-                        <call-widget-method method="{$event-parameters.name}Box.hide"/>
+                        <set-field field="_landing-site.landingBoxName">
+                            <support:get-namespaced-widget-name widget="{$event-parameters.name}"/>
+                        </set-field>
+                        <call-widget-method method="{$_landing-site.landingBoxName}.hide"/>
                     </else>
                 </if>
             </when>

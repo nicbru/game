@@ -29,8 +29,13 @@ YAHOO
             this.path = this.getAttribute('path');
             this.extension = this.getAttribute('extension');
             this.framesCount = parseInt(this.getAttribute('frames'));
-            this.ranges = this.getXMLContext().getAllSubElements().hasOwnProperty('range') ? this.getXMLContext().getAllSubElements().range : [];
             
+            this.ranges = [];
+            var ranges = this.getXMLContext().getAllSubElements().hasOwnProperty('range') ? this.getXMLContext().getAllSubElements().range : [];
+            for(var i = 0;i < ranges.length;i++){
+                this.ranges.push(new Range(ranges[i].getAttribute('name'), ranges[i].getAttribute('start'), ranges[i].getAttribute('end')));
+            }
+
             this.threshold = parseInt(this.getAttribute('threshold'));
             this.current = 0;
         },
@@ -69,11 +74,11 @@ YAHOO
                         self.prevMoveEvent = event;
                         
                         for(var i = 0;i < self.ranges.length;i++){
-                            var start = parseInt(self.ranges[i].getAttribute('start')) === self.index;
-                            var end = parseInt(self.ranges[i].getAttribute('end')) === self.index;
+                            var start = parseInt(self.ranges[i].getStart()) === self.index;
+                            var end = parseInt(self.ranges[i].getEnd()) === self.index;
                             if(start || end){
                                 self.onRange.fireEvent({
-                                    'name': self.ranges[i].getAttribute('name'),
+                                    'name': self.ranges[i].getName(),
                                     'inRange': start && !isMovingLeft || end && isMovingLeft
                                 });
                             }
@@ -122,7 +127,32 @@ YAHOO
                     }
                 }, false);
             })(0);
+        },
+        
+        registerRange: function(name, start, end){
+            this.ranges.push(new Range(name, start, end));
         }
     });
+    
+    function Range(name, start, end){
+        this.name = name;
+        this.start = start;
+        this.end = end;
+    }
+    Range.prototype = {
+        constructor: Range,
+        
+        getName: function(){
+            return this.name;
+        },
+        
+        getStart: function(){
+            return this.start;
+        },
+        
+        getEnd: function(){
+            return this.end;
+        }
+    };
 })();
 

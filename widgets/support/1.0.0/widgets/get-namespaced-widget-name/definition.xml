@@ -1,0 +1,11 @@
+<widget name="get-namespaced-widget-name"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        action="y">
+    <attributes>
+        <attribute name="widget" type="string" mandatory="y"/>
+    </attributes>
+    <includes>
+        <js-include file="GetNamespacedWidgetName.js"/>
+    </includes>
+    <js-constructor>new YAHOO.game.GetNamespacedWidgetName()</js-constructor>
+</widget>

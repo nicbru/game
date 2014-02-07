@@ -1,4 +1,7 @@
 <do>
+    <dataset name="_landing-site"/>
+    <create-row dataset="_landing-site"/>
+    
     <dataset name="stages" databinding="stage" query="get-all-by-name">
         <param name="name" value="{$parameters.stage-name}"/>
     </dataset>
