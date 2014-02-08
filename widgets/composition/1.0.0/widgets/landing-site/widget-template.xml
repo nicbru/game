@@ -26,7 +26,11 @@
         <scene name="{@name}-capability4Scene" position="relative" width="100%" height="100%" path="/aviarc/game/www/img/scene2" extension="jpg" frames="82">
             <repeater dataset="capabilities/features" scroll-to-new="n" auto-refresh="n" show-timer="n">
                 <container name="{@name}-{$capabilities/features.value}Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
-                    <button label="Select" bottom="20" right="20" width="80" height="40"/>
+                    <button label="{$capabilities/features.label}" bottom="20" right="20" width="120" height="40">
+                        <action:when event="onClick">
+                            <action:call-ajax-workflow name="composition/landing-site/select-feature" show-timer="n"/>
+                        </action:when>
+                    </button>
                 </container>
                 <action:when system-event="onBindComplete">
                     <action:call-widget-method method="{@name}-capability4Scene.registerRange" value1="{@name}-{$capabilities/features.value}Box" value2="{$capabilities/features.range-start}" value3="{$capabilities/features.range-end}"/>
