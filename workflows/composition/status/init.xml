@@ -1,7 +1,7 @@
 <do>
     <dataset name="_status"/>
     <create-row dataset="_status"/>
-    <dataset name="stages" databinding="stage"/>
-    <dataset name="options" databroker="option"/>
+    <dataset name="capabilities" databinding="capability"/>
+    <dataset name="features" databroker="feature"/>
     <call-workflow name="composition/status/refresh"/>
 </do>

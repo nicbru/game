@@ -1,7 +1,7 @@
 <workflow xmlns:dataset="urn:aviarc:xmlcommand:com.aviarc.dataset">
     <dataset-iterator dataset="{$context.internal-dataset-name}">
         <if>
-            <condition test="equal" value1="{${$context.internal-dataset-name}.user-id}" value2="{$parameters.user-id}"/>
+            <condition test="equal" value1="{${$context.internal-dataset-name}.player-id}" value2="{$parameters.player-id}"/>
             <then>
                 <create-row dataset="{$context.populate-dataset-name}"/>
                 <dataset:field-iterator dataset="{$context.internal-dataset-name}" value-field="var.value-field" name-field="var.field-name">

@@ -31,7 +31,7 @@
                         <composition:status left="0" top="100" bottom="0" right="0"/>
                     </container>
                 </edge-detecting-container>
-                <edge-detecting-container name="stage4" position="relative" width="100%" height="100%" class="inline-block">
+                <edge-detecting-container name="capability4" position="relative" width="100%" height="100%" class="inline-block">
                     <container position="absolute" offset="0">
                         <composition:landing-site name="landingSite" width="100%" height="100%" class="inline-block"/>
                     </container>
@@ -74,7 +74,7 @@
                     <call-widget-method method="status2.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status3.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status4.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
-                    <call-widget-method method="stage4.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                    <call-widget-method method="capability4.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status5.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status6.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="status7.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
@@ -89,7 +89,7 @@
                 <when event="status4.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
                 </when>
-                <when event="stage4.edgeDetected">
+                <when event="capability4.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
                     <call-widget-method method="kinetic.setX" value1="n"/>
                     <call-widget-method method="landingSite.bindDragListener"/>

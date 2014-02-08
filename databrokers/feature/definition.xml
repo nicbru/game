@@ -2,11 +2,11 @@
     <populate-operation name="get-all">
         <workflow-result workflow="workflows/get-all"/>
     </populate-operation>
-    <populate-operation name="get-all-by-user-id">
+    <populate-operation name="get-all-by-player-id">
         <parameters>
-            <parameter name="user-id" mandatory="y"/>
+            <parameter name="player-id" mandatory="y"/>
         </parameters>
-        <workflow-result workflow="workflows/get-all-by-user-id"/>
+        <workflow-result workflow="workflows/get-all-by-player-id"/>
     </populate-operation>
 </databroker>
 

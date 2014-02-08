@@ -19,11 +19,11 @@
     xmlns:support="urn:aviarc:widget:support"
     xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
     <support:datacontext workflow="composition/status/init">
-        <repeater name="{@name}-statusList" scroll-to-new="n" auto-refresh="n" show-timer="n" dataset="stages">
-            <container position="static" class="clear-fix outline-grey {$stages._selected-class}">
+        <repeater name="{@name}-statusList" scroll-to-new="n" auto-refresh="n" show-timer="n" dataset="capabilities">
+            <container position="static" class="clear-fix outline-grey {$capabilities._selected-class}">
                 <text-static position="static" text="CHOOSE" height="20" padding-left="20"/>
                 <text-static position="static" text="your" height="10" padding-left="20"/>
-                <text-static position="static" text="{$stages.name}" height="20" padding-left="20"/>
+                <text-static position="static" text="{$capabilities.name}" height="20" padding-left="20"/>
             </container>
         </repeater>
         <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
@@ -31,17 +31,17 @@
                 <call-widget-method method="{@name}-add-selected-class.run"/>
                 <call-widget-method method="{@name}-statusList.rerender"/>
             </when>
-            <when dataset-event="stages.onContentsReplaced">
+            <when dataset-event="capabilities.onContentsReplaced">
                 <call-widget-method method="{@name}-add-selected-class.run"/>
                 <call-widget-method method="{@name}-statusList.rerender"/>
             </when>
             <action name="{@name}-add-selected-class">
-                <dataset:dataset-iterator dataset="stages">
-                    <dataset:dataset-iterator dataset="options">
+                <dataset:dataset-iterator dataset="capabilities">
+                    <dataset:dataset-iterator dataset="features">
                         <if>
-                            <condition test="equal" value1="{$stages.id}" value2="{$options.parent-id}"/>
+                            <condition test="equal" value1="{$capabilities.id}" value2="{$features.parent-id}"/>
                             <then>
-                                <set-field field="stages._selected-class" value="selected"/>
+                                <set-field field="capabilities._selected-class" value="selected"/>
                             </then>
                         </if>
                     </dataset:dataset-iterator>

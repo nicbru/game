@@ -1,6 +1,6 @@
 <databinding
     factory-class="com.aviarc.framework.databinding.basic.BasicDataBindingFactoryImpl"
-    databroker="option">
+    databroker="feature">
     <populate-operation name="get-all" broker-operation="get-all">
         <parameters>
             <parameter name="filter-non-direct-descendants" value="{@filter-non-direct-descendants}"/>
