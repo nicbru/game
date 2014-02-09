@@ -7,20 +7,19 @@ YAHOO
     var game = YAHOO.game;
     var Toronto = YAHOO.com.aviarc.framework.toronto;
 
-    game.LandingSite = function() {
-        this.onBindDragListener = new Toronto.client.Event();
-        this.onEndReached = new Toronto.client.Event();
+    game.Status = function() {
         this.onChange = new Toronto.client.Event();
         this.onUpdate = new Toronto.client.Event();
     };
 
-    YAHOO.lang.extend(game.LandingSite, Toronto.framework.DefaultTemplateWidgetImpl, {
+    YAHOO.lang.extend(game.Status, Toronto.framework.DefaultTemplateWidgetImpl, {
+
         startup: function (widgetContext) {
-            game.LandingSite.superclass.startup.apply(this, arguments);
+            game.Status.superclass.startup.apply(this, arguments);
         },
 
         bind: function (dataContext) {
-            game.LandingSite.superclass.bind.apply(this, arguments);
+            game.Status.superclass.bind.apply(this, arguments);
         },
 
         refresh: function () {
@@ -40,26 +39,6 @@ YAHOO
         update: function(value1, value2, value3, value4){
         
             this.onUpdate.fireEvent({
-                'value1': value1,
-                'value2': value2,
-                'value3': value3,
-                'value4': value4
-            });
-        },
-        
-        bindDragListener: function(value1, value2, value3, value4){
-        
-            this.onBindDragListener.fireEvent({
-                'value1': value1,
-                'value2': value2,
-                'value3': value3,
-                'value4': value4
-            });
-        },
-        
-        endReached: function(value1, value2, value3, value4){
-        
-            this.onEndReached.fireEvent({
                 'value1': value1,
                 'value2': value2,
                 'value3': value3,

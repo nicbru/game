@@ -31,7 +31,7 @@
                 <call-widget-method method="{@name}-add-selected-class.run"/>
                 <call-widget-method method="{@name}-statusList.rerender"/>
             </when>
-            <when dataset-event="capabilities.onContentsReplaced">
+            <when dataset-event="features.onContentsReplaced">
                 <call-widget-method method="{@name}-add-selected-class.run"/>
                 <call-widget-method method="{@name}-statusList.rerender"/>
             </when>
@@ -47,6 +47,9 @@
                     </dataset:dataset-iterator>
                 </dataset:dataset-iterator>
             </action>
+            <when event="{@name}.onUpdate">
+                <call-ajax-workflow name="composition/status/refresh" show-timer="n"/>
+            </when>
         </behaviors>
     </support:datacontext>
 </container>
