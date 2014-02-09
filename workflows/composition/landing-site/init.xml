@@ -1,8 +1,6 @@
 <do>
     <dataset name="_landing-site"/>
     <create-row dataset="_landing-site"/>
-    
-    <dataset name="capabilities" databinding="capability" query="get-all-by-name">
-        <param name="name" value="{$parameters.capability-name}"/>
-    </dataset>
+    <dataset name="capabilities" databinding="capability"/>
+    <call-workflow name="composition/landing-site/refresh"/>
 </do>

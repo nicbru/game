@@ -1,4 +1,4 @@
-<do xmlns:support="urn:aviarc:xmlcommand:support">
+<do>
     <refresh-dataset name="capabilities" query="get-all"/>
     <refresh-dataset name="features" query="get-all-by-player-id">
         <param name="player-id" value="{$players.id}"/>

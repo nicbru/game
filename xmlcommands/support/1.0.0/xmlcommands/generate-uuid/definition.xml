@@ -1,0 +1,5 @@
+<xml-command name="generate-uuid" classname="qmuportal.xmlcommands.GenerateUuid">
+    <!-- a new uuid is returned. for use with set-field -->
+    <attributes>
+    </attributes>
+</xml-command>

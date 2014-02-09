@@ -1,0 +1,5 @@
+<do>
+    <refresh-dataset name="capabilities" query="get-all-by-name">
+        <param name="name" value="{$parameters.capability-name}"/>
+    </refresh-dataset>
+</do>

@@ -1,0 +1,16 @@
+<workflow xmlns:dataset="urn:aviarc:xmlcommand:com.aviarc.dataset">
+    <dataset-iterator dataset="{$context.internal-dataset-name}">
+        <if>
+            <and>
+                <condition test="equal" value1="{${$context.internal-dataset-name}.player-id}" value2="{$parameters.player-id}"/>
+                <condition test="equal" value1="{${$context.internal-dataset-name}.feature-id}" value2="{$parameters.feature-id}"/>
+            </and>
+            <then>
+                <create-row dataset="{$context.populate-dataset-name}"/>
+                <dataset:field-iterator dataset="{$context.internal-dataset-name}" value-field="var.value-field" name-field="var.field-name">
+                    <set-field field="{$context.populate-dataset-name}.{$var.field-name}" value="{$var.value-field}"/>
+                </dataset:field-iterator>
+            </then>
+        </if>
+    </dataset-iterator>
+</workflow>

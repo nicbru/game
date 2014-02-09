@@ -1,3 +1,26 @@
-<do>
-    <debug text="select-feature: {$capabilities/features.value}"/>
+<do xmlns:support="urn:aviarc:xmlcommand:support">
+    <with-datasets>
+        <dataset name="player-features" databroker="player-feature" query="get-all-by-player-id-and-feature-id">
+            <param name="player-id" value="{$players.id}"/>
+            <param name="feature-id" value="{$capabilities/features.id}"/>
+        </dataset>
+        <if>
+            <condition test="dataset-empty" value1="player-features"/>
+            <then>
+                <create-row dataset="player-features"/>
+                <set-field field="player-features.id">
+                    <support:generate-uuid/>
+                </set-field>
+                <set-field field="player-features.player-id" value="{$players.id}"/>
+                <set-field field="player-features.feature-id" value="{$capabilities/features.id}"/>
+                <mark-row-created dataset="player-features"/>
+            </then>
+            <else>
+                <mark-all-rows-deleted dataset="player-features"/>
+            </else>
+        </if>
+        <atomic-commit>
+            <dataset name="player-features"/>
+        </atomic-commit>
+    </with-datasets>
 </do>

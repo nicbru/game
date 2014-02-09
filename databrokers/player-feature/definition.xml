@@ -5,5 +5,17 @@
         </parameters>
         <workflow-result workflow="workflows/get-all-by-player-id"/>
     </populate-operation>
+    <populate-operation name="get-all-by-player-id-and-feature-id">
+        <parameters>
+            <parameter name="player-id" mandatory="y"/>
+            <parameter name="feature-id" mandatory="y"/>
+        </parameters>
+        <workflow-result workflow="workflows/get-all-by-player-id-and-feature-id"/>
+    </populate-operation>
+
+    <store-dataset-changes>
+        <create workflow="workflows/create"/>
+        <delete workflow="workflows/delete"/>
+    </store-dataset-changes>
 </databroker>
 

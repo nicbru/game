@@ -12,6 +12,9 @@
     </populate-operation>
     
     <populate-operation name="get-all-by-name" broker-operation="get-all-by-name">
+        <parameters>
+            <parameter name="name" value="{@name}"/>
+        </parameters>
         <child-dataset name="features" databinding="feature">
             <populate-operation operation="get-all">
                 <parameter name="filter-non-direct-descendants" value="true"/>
