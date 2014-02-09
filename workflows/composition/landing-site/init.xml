@@ -2,5 +2,6 @@
     <dataset name="_landing-site"/>
     <create-row dataset="_landing-site"/>
     <dataset name="capabilities" databinding="capability"/>
+    <dataset name="features" databroker="feature"/>
     <call-workflow name="composition/landing-site/refresh"/>
 </do>

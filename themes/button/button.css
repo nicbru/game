@@ -14,6 +14,10 @@
     background-color:#9AA2A5;
 }
 
+.$URN$_button-selected{
+    border:2px solid #db6347;
+}
+
 .$URN$_button > a.button-anchor{
     position:relative;
     display:block;

@@ -2,4 +2,7 @@
     <refresh-dataset name="capabilities" query="get-all-by-name">
         <param name="name" value="{$parameters.capability-name}"/>
     </refresh-dataset>
+    <refresh-dataset name="features" query="get-all-by-player-id">
+        <param name="player-id" value="{$players.id}"/>
+    </refresh-dataset>
 </do>

@@ -21,6 +21,6 @@
         <field name="label" value="Site Three"/>
         <field name="value" value="siteThree"/>
         <field name="range-start" value="53"/>
-        <field name="range-end" value="82"/>
+        <field name="range-end" value="81"/>
     </row>
 </dataset>
