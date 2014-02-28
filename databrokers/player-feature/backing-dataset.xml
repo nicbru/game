@@ -1,12 +1,2 @@
 <dataset name="backing-dataset">
-  <row>
-      <field name="id" value="61afbb7b-b8e3-46ea-8615-ba43aae7d9e3"/>
-      <field name="player-id" value="8c3cbb27-cb99-4fd1-ad75-4ed7e89778ee"/>
-      <field name="feature-id" value="00fe8292-6bed-42fa-bd7f-427742bb8a57"/>
-  </row>
-  <row>
-      <field name="id" value="f2fcef4d-a570-4e43-8b08-af202483a3c8"/>
-      <field name="player-id" value="8c3cbb27-cb99-4fd1-ad75-4ed7e89778ee"/>
-      <field name="feature-id" value="e0206679-9a3e-42cc-8a6f-acf2615f4e05"/>
-  </row>
 </dataset>

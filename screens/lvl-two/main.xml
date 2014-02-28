@@ -15,6 +15,14 @@
             </container>
         
             <kinetic name="kinetic" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
+                <edge-detecting-container name="navigationSystemStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
+                    <container position="absolute" offset="0">
+                        <composition:status name="navigationSystemStatus" left="0" top="100" bottom="0" right="0"/>
+                    </container>
+                </edge-detecting-container>
+                <edge-detecting-container name="navigationSystemEDC" position="relative" width="100%" height="100%" class="inline-block">
+                    
+                </edge-detecting-container>
                 <edge-detecting-container name="landingSiteStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
                         <composition:status name="landingSiteStatus" left="0" top="100" bottom="0" right="0"/>
@@ -24,6 +32,14 @@
                     <container position="absolute" offset="0">
                         <composition:landing-site name="landingSite" width="100%" height="100%" class="inline-block"/>
                     </container>
+                </edge-detecting-container>
+                <edge-detecting-container name="landingMethodStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
+                    <container position="absolute" offset="0">
+                        <composition:status name="landingMethodStatus" left="0" top="100" bottom="0" right="0"/>
+                    </container>
+                </edge-detecting-container>
+                <edge-detecting-container name="landingMethodEDC" position="relative" width="100%" height="100%" class="inline-block">
+                    
                 </edge-detecting-container>
             </kinetic>
             
