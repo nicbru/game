@@ -1,7 +1,181 @@
-<screen xmlns:layout="urn:aviarc:widget:layout">
+<screen xmlns:layout="urn:aviarc:widget:layout" 
+xmlns:composition="urn:aviarc:widget:composition"  
+xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
     <layout:master-template position="static">
         <content id="main">
-
+            
+            <kinetic name="kinetic" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
+                <edge-detecting-container name="landingSiteStatusEDC" position="relative" width="400" height="100%" class="inline-block outline-grey">
+                    <container position="absolute" offset="0">
+                        <composition:menu name="landingSiteStatus" left="0" top="0" bottom="0" right="0"/>
+                    </container>
+                </edge-detecting-container>
+                <edge-detecting-container name="landingSiteEDC" position="relative" width="100%" height="100%" class="inline-block">
+                    <container position="absolute" offset="0">
+                        
+                        <container position="relative" height="100%">
+                            <container position="absolute" height="100%" width="1635%" class="starsbehind"></container>
+                            <container position="absolute" height="100%" width="1635%" class="starsfront"></container>
+                            <container position="absolute" height="500px" width="1000px" top="100px" left="1837px" class="white-nebula"></container>
+                            <container position="absolute" height="100%" width="5800px" top="0px" left="1437px" class="arm"></container>
+                            <container position="absolute" height="100%" width="5800px" top="0px" left="7237px" class="arm"></container>
+                            
+                            <container position="absolute" height="100%" width="1500px" class="sun"></container>
+                            <!--<edge-detecting-container name="landingSiteEDC" position="relative" width="100%" height="100%" class="inline-block">
+                                <container position="absolute" offset="0">
+                                    <composition:landing-site name="landingSite" width="100%" height="100%" class="inline-block"/>
+                                </container>
+                            </edge-detecting-container>-->
+                            <container position="absolute" height="100%" width="491px" left="1500px" class="sun-gradient"></container>
+                            
+                            <container position="absolute" height="100%" width="400" left="1600">
+                                <container position="absolute" height="71" width="71" top="80%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-sun transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="576px" width="1050px" top="20%" left="3057px" class="earth"></container>
+                            <container position="absolute" height="100%" width="400" left="4250">
+                                <container position="absolute" height="71" width="71" top="80%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-earth transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="100%" width="791px" left="4351px" class="belt"></container>
+                            <container position="absolute" height="100%" width="400" left="5500">
+                                <container position="absolute" height="71" width="71" top="20%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-belt transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="100%" width="845px" left="5616px" class="nebula"></container>
+                            <container position="absolute" height="100%" width="400" left="6600">
+                                <container position="absolute" height="71" width="71" top="70%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-nebula transparent show-this"></container>
+                            </container>
+                                
+                            
+                            <container position="absolute" height="100%" width="1368" left="6115px" class="moon"></container>
+                            <container position="absolute" height="100%" width="400" left="7600">
+                                <container position="absolute" height="71" width="71" top="20%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-moon transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="100%" width="550" left="8114px" class="comet"></container>
+                            <container position="absolute" height="100%" width="400" left="9200">
+                                <container position="absolute" height="71" width="71" top="70%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-comet transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="240px" width="320px" left="9408px" class="spoutnik"></container>
+                            <container position="absolute" height="100%" width="400" left="10000">
+                                <container position="absolute" height="71" width="71" top="30%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-spoutnik transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="600px" width="900px" left="9996px" bottom="0px" class="monkey"></container>
+                            <container position="absolute" height="100%" width="400" left="11000">
+                                <container position="absolute" height="71" width="71" top="20%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-monkey transparent show-this"></container>
+                            </container>
+                                
+                            
+                            <container position="absolute" height="500px" width="500px" left="11642px" top="100px" class="mars"></container>
+                            <container position="absolute" height="100%" width="400" left="12300">
+                                <container position="absolute" height="71" width="71" top="80%" left="0" class="button zindex-1 hover-this"></container>
+                                <container position="absolute" height="100%" width="352" top="0" left="100" class="card-mars transparent show-this"></container>
+                            </container>
+                            
+                            <container position="absolute" height="100%" width="1600px" left="12935px" class="dark">
+                                <container position="relative" height="200px" width="100%" class="dark"> </container>
+                                
+                                
+                                <container position="relative" float="left" margin-top="20" margin-left="200" height="200px" width="200px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="110" margin-left="20" height="150px" width="150px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="50" margin-left="50" height="200px" width="200px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="70" margin-left="70" height="220px" width="220px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="90" margin-left="40" height="170px" width="170px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="100" margin-left="80" height="200px" width="200px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="60" margin-left="100" height="150px" width="150px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="50" margin-left="80" height="220px" width="220px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="70" margin-left="50" height="200px" width="200px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="100" margin-left="60" height="220px" width="220px" class="tabel-item"></container>
+                                <container position="relative" float="left" margin-top="110" margin-left="100" height="180px" width="180px" class="tabel-item"></container>
+                            </container>
+                        </container>  
+                        
+                        
+                        <container position="fixed" bottom="170px" left="25%" width="55%">
+                        
+                        
+                            <container position="absolute" height="15px" width="15px" left="100%" top="130px" class="dark rounded15 nav-dot hover-this">
+                                <button position="relative" width="100%" height="100%" class="hyperlink no-bg" label="" >
+                                    <action:when event="onClick">
+                                        <action:call-widget-method method="test.show" />
+                                    </action:when>
+                                </button>
+                            </container>
+                            
+                            
+                            <!--<button width="12" height="12" right="6" top="6" class="hyperlink no-bg" label="" >
+                                <action:when event="onClick">
+                            <app:augment aspect="top" start="420" widget="search-results" end="120" fps="30" time="100"/>
+                            <action:call-widget-method method="advanced-search-tools.hide" />
+                            <action:call-widget-method method="hide-advanced-search-button.hide" />
+                            <action:call-widget-method method="show-advanced-search-button.show" />
+                            </action:when>
+                            </button>-->
+                        
+                        
+                        
+                            <container position="absolute" width="150px" top="0">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="sun-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="10%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="earth-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="20%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="belt-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="30%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="nebula-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="40%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="moon-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="50%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="comet-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="60%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="spoutnik-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="70%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="monkey-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="80%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="mars-thumb transparent show-this"></container>
+                            </container>
+                            <container position="absolute" width="150px" top="0" left="90%">
+                                <container position="absolute" height="15px" width="15px" left="45%" top="130px" class="dark rounded15 nav-dot hover-this"></container>
+                                <container position="relative" float="left" height="125px" width="100%" class="table-thumb transparent show-this"></container>
+                            </container>
+                            
+                        </container>
+                         
+                        
+                    </container>
+                </edge-detecting-container>
+            </kinetic>
+            
+            
+            
+            
         </content>
     </layout:master-template>
 </screen>

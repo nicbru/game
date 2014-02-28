@@ -27,3 +27,396 @@
 .$URN$_container-rounded{
     border-radius:2px;
 }
+
+.$URN$_container-rounded15{
+    border-radius: 15px;
+}
+
+.$URN$_container-transparent{
+    opacity: 0;
+}
+
+.$URN$_container-zindex-1{
+    z-index: 1;
+}
+
+.$URN$_container-pointer{
+    cursor: pointer;
+}
+
+.$URN$_container-hover-this{
+    cursor: pointer;
+}
+
+.$URN$_container-hover-this:hover + .$URN$_container-show-this{
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    z-index: 1;
+}
+
+.$URN$_container-drop-down{
+    top: -600px;   
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.$URN$_container-hover-down:hover + .$URN$_container-drop-down{
+    top: 0px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.$URN$_container-drop-down:hover{
+    top: 0px;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.$URN$_container-nav-dot{
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/button.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-level-two-menu {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-two-menu.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	z-index: 1;
+}
+
+.$URN$_container-vertical-menu-tab{
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/verticalMenuTab.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	z-index: 1;
+}
+
+.$URN$_container-starsbehind {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/starfield-top.jpg);
+	background-size: 640px 512px;
+}
+.$URN$_container-starsfront {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/stars2.png);
+	background-size: 1280px 800px;
+}
+.$URN$_container-white-nebula {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/white-nebula.png);
+	background-size: 598px 357px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-arm {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/galaxy2.png);
+	background-size: 5800px 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-sun {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/sun/sun_00000.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-sun-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/sunThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-sun-gradient {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/sun/gradient.png);
+	background-size: 100% 150%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-card-sun {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/solar-flare.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-earth {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/earth/EARTH_00049.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-button {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/button.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-earth {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/gravity.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-earth-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/earthThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-belt {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/belt/belt_00014.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-belt {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/belt-radiation.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-belt-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/beltThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-nebula {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/nebula/Green-Nebula.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-nebula {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/fitness.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-nebula-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/nebulaThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-moon {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/moon/MOON_00009.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-moon {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/nutrition.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-moon-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/moonThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-comet {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/comet/comet_00034.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-comet {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/travel-time.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-comet-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/cometThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-spoutnik {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/spoutnik/spoutnik_00017.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-spoutnik {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/environment.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-spoutnik-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/spoutnikThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-monkey {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/monkey/rocket_032.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-monkey {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/insanity.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-monkey-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/monkeyThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-mars {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/mars/mars_00020.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-card-mars {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Cards/mars-radiation.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-mars-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/marsThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-tabel-item {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/navigation.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+
+.$URN$_container-table-thumb {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/thumbnails/tableThumbnail.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-menu-title {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/menuTitle.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-menu-bg {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/menuBg.jpg);
+	background-repeat: repeat-y;
+	background-position: 0 0;
+}
+
+.$URN$_container-menu-divider {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/menuDivider.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-menu-tab {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/menuTab.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	z-index: 1;
+}
+
+.$URN$_container-earth-image {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/level-three-earth.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.$URN$_container-accordian-navigation {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/navigation.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-propulsion {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/propulsion.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-nutrition {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/nutrition.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-landing-site {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landingSite.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-equipment {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/equipment.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-health {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/health.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-launching {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/launching.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.$URN$_container-accordian-landing-method {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landingMethod.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

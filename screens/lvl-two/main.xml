@@ -1,6 +1,19 @@
 <screen xmlns:layout="urn:aviarc:widget:layout" xmlns:composition="urn:aviarc:widget:composition">
-    <layout:master-template left="0" top="0" bottom="0" right="0">
+    <layout:master-template position="static">
         <content id="main">
+        
+            <container position="fixed" width="100%" height="600px">
+                <container position="absolute" width="135" height="42" left="46%" class="vertical-menu-tab hover-down"></container>
+                <container position="relative" float="left" width="100%" height="600px" class="level-two-menu drop-down">
+                    <container position="absolute" width="135" height="42" left="46%" top="600" class="vertical-menu-tab"></container>
+                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                </container>
+            </container>
+        
             <kinetic name="kinetic" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
                 <edge-detecting-container name="landingSiteStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
@@ -13,6 +26,8 @@
                     </container>
                 </edge-detecting-container>
             </kinetic>
+            
+            
             <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
                 <when event="kinetic.onMove">
                     <call-widget-method method="landingSiteStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
