@@ -21,7 +21,9 @@
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="navigationSystemEDC" position="relative" width="100%" height="100%" class="inline-block">
-                    
+                    <container position="absolute" offset="0">
+                        <composition:navigation-system name="navigationSystem" width="100%" height="100%" class="inline-block"/>
+                    </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="landingSiteStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
@@ -39,10 +41,11 @@
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="landingMethodEDC" position="relative" width="100%" height="100%" class="inline-block">
-                    
+                    <container position="absolute" offset="0">
+                        <composition:landing-method  name="landingMethod" width="100%" height="100%" class="inline-block"/>
+                    </container>
                 </edge-detecting-container>
             </kinetic>
-            
             
             <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
                 <when event="kinetic.onMove">
