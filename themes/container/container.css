@@ -28,10 +28,6 @@
     border-radius:2px;
 }
 
-.$URN$_container-rounded15{
-    border-radius: 15px;
-}
-
 .$URN$_container-transparent{
     opacity: 0;
 }
@@ -71,13 +67,6 @@
     top: 0px;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-
-.$URN$_container-nav-dot{
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/button.png);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-position: 0 0;
 }
 
 .$URN$_container-level-two-menu {

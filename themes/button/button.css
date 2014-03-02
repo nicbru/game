@@ -2,7 +2,9 @@
     border:2px solid #f7f7f7;
     border-radius:2px;
     background-color:#7c9aa6;
-}.$URN$_button:hover{
+}
+
+.$URN$_button:hover{
     background-color:#8BACBA;
 }
 
@@ -36,4 +38,24 @@
     text-align:center;
     font-weight:bold;
     color:#f7f7f7;
+}
+
+.$URN$_button-no-bg:hover{
+    background-color: transparent;   
+}
+
+.$URN$_button-no-bg{
+    border: none;
+    background-color: transparent;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/button.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_button-hover-this:hover + .$URN$_container-show-this{
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    z-index: 1;
 }

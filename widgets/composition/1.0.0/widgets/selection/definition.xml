@@ -1,0 +1,8 @@
+<widget name="selection"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes></attributes>
+    <children allowed="n"/>
+    <includes>
+        <js-include file="Selection.js"/>
+    </includes>
+    <js-constructor>new YAHOO.game.Status()</js-constructor>
+</widget>

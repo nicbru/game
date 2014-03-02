@@ -9,4 +9,9 @@
       <field name="player-id" value="8c3cbb27-cb99-4fd1-ad75-4ed7e89778ee"/>
       <field name="feature-id" value="e0206679-9a3e-42cc-8a6f-acf2615f4e05"/>
   </row>
+  <row>
+      <field name="id" value="633b3df7-95a3-4a6b-af05-1837a8fd8321"/>
+      <field name="player-id" value="8c3cbb27-cb99-4fd1-ad75-4ed7e89778ee"/>
+      <field name="feature-id" value="01cae174-3d7f-4729-be85-42cf0720335e"/>
+  </row>
 </dataset>

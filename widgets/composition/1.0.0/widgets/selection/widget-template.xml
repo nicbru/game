@@ -1,0 +1,116 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
+    <support:datacontext workflow="composition/selection/init">
+        
+        <container position="relative" float="left" height="66%" width="100%" class="dark earth-image">
+        
+        </container>
+        
+        <container position="relative" float="left" height="10%" width="100%" class="outline-grey">
+            <container position="relative" float="left" height="40%" width="92%" margin-top="20" margin-left="4%" class="outline-grey">
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+                <container position="relative" float="left" width="5%" height="80%" margin-left="10" margin-top="3" class="dark"></container>
+            </container>
+            <container position="absolute" height="50" width="100" top="10" left="100" class="outline-grey pointer"></container>
+        </container>
+        
+        <container position="relative" float="left" height="23%" width="100%" class="dark">
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-navigation dark outline-grey">
+
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-propulsion dark outline-grey">
+            
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-nutrition dark outline-grey">
+            
+            </container>
+            <container position="relative" float="left" height="100%" width="65%" class="dark outline-grey">
+                <container position="absolute" height="90%" width="35%" left="1%" top="5%" class="dark">
+
+                </container>
+                <container position="absolute" height="42%" width="60%" right="1%" top="5%" class="dark">
+                    <text-static margin="10" text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                    If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the 
+                    middle of text." class="dark"/>
+                </container>
+                <container position="absolute" height="42%" width="60%" right="1%" bottom="5%" class="dark">
+
+                </container>
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-equipment dark outline-grey">
+            
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-health dark outline-grey">
+            
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-launching dark outline-grey">
+            
+            </container>
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-landing-method dark outline-grey">
+            
+            </container>
+        
+        </container>
+        
+        
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when system-event="onBindComplete">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <when dataset-event="features.onContentsReplaced">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <action name="{@name}-add-selected-class">
+                <dataset:dataset-iterator dataset="capabilities">
+                    <dataset:dataset-iterator dataset="features">
+                        <if>
+                            <condition test="equal" value1="{$capabilities.id}" value2="{$features.parent-id}"/>
+                            <then>
+                                <set-field field="capabilities._selected-class" value="selected"/>
+                            </then>
+                        </if>
+                    </dataset:dataset-iterator>
+                </dataset:dataset-iterator>
+            </action>
+            <when event="{@name}.onUpdate">
+                <call-ajax-workflow name="composition/selection/refresh" show-timer="n"/>
+            </when>
+        </behaviors>
+    </support:datacontext>
+</container>

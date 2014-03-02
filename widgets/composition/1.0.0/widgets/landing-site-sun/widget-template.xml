@@ -1,0 +1,86 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    class="{@class}"
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
+    <support:datacontext workflow="composition/landing-site/init">
+        <support:parameters>
+            <support:param name="capability-name" value="{@capability-name}"/>
+        </support:parameters>
+        <scene name="{@name}-capability4Scene" position="relative" width="100%" height="100%" path="/aviarc/game/theme/image/sun" extension="png" frames="82">
+            <repeater name="{@name}-featureList" dataset="capabilities/features" scroll-to-new="n" auto-refresh="n" show-timer="n">
+                <container name="{@name}-{$capabilities/features.value}Box" left="50" bottom="50" width="500" height="300" visible="n" class="opacity80 dark default-cursor rounded">
+                    <button label="{$capabilities/features.label}" bottom="20" right="20" width="120" height="40" class="{$capabilities/features._selected-class}">
+                        <action:when event="onClick">
+                            <action:call-ajax-workflow name="composition/landing-site/select-feature" show-timer="n"/>
+                            <action:call-widget-method method="{@name}.change"/>
+                            <action:call-widget-method method="{@name}-add-selected-class.run"/>
+                            <!-- TODO: apply new selected class. rerender? -->
+                        </action:when>
+                    </button>
+                </container>
+                <action:when system-event="onBindComplete">
+                    <action:call-widget-method method="{@name}-capability4Scene.registerRange" value1="{@name}-{$capabilities/features.value}Box" value2="{$capabilities/features.range-start}" value3="{$capabilities/features.range-end}"/>
+                </action:when>
+            </repeater>
+        </scene>
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when widget-event="{@name}.onBindDragListener">
+                <call-widget-method method="{@name}-capability4Scene.bindDragListener"/>
+            </when>
+            <when event="{@name}-capability4Scene.onRange">
+                <if>
+                    <condition test="equal" value1="{$event-parameters.inRange}" value2="true"/>
+                    <then>
+                        <set-field field="_landing-site.landingBoxName">
+                            <support:get-namespaced-widget-name widget="{$event-parameters.name}"/>
+                        </set-field>
+                        <call-widget-method method="{$_landing-site.landingBoxName}.show"/>
+                    </then>
+                    <else>
+                        <set-field field="_landing-site.landingBoxName">
+                            <support:get-namespaced-widget-name widget="{$event-parameters.name}"/>
+                        </set-field>
+                        <call-widget-method method="{$_landing-site.landingBoxName}.hide"/>
+                    </else>
+                </if>
+            </when>
+            <when event="{@name}-capability4Scene.onEndReached">
+                <call-widget-method method="{@name}.endReached"/>
+            </when>
+            <when system-event="onBindComplete">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-featureList.rerender"/>
+            </when>
+            <action name="{@name}-add-selected-class">
+                <dataset:dataset-iterator dataset="capabilities/features">
+                    <dataset:dataset-iterator dataset="features">
+                        <if>
+                            <condition test="equal" value1="{$capabilities/features.id}" value2="{$features.id}"/>
+                            <then>
+                                <set-field field="capabilities/features._selected-class" value="selected"/>
+                            </then>
+                        </if>
+                    </dataset:dataset-iterator>
+                </dataset:dataset-iterator>
+            </action>
+        </behaviors>
+    </support:datacontext>
+</container>

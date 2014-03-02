@@ -1,0 +1,59 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
+    <support:datacontext workflow="composition/menu/init">
+        
+        <container position="relative" height="100%" width="100%" class="menu-bg">
+            <container position="relative" height="303" width="100%" class="menu-title"></container>
+            <text-static position="relative" text="Mission" height="50" padding-left="20" padding-right="20" class=""/>
+            <text-static position="relative" text="This is the text with instructions on how to play level one" height="50" padding-left="20" padding-right="20" class=""/>
+            <container position="relative" height="47" width="400" class="menu-divider"></container>
+            <text-static position="relative" text="Some other stuff to say " height="50" padding-left="20" padding-right="20" margin-bottom="200" class=""/>
+            <container position="relative" height="47" width="400" class="menu-divider"></container>
+        </container>
+        <container position="absolute" height="134" width="42" top="40%" left="400" class="menu-tab"></container>
+        
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when system-event="onBindComplete">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <when dataset-event="features.onContentsReplaced">
+                <call-widget-method method="{@name}-add-selected-class.run"/>
+                <call-widget-method method="{@name}-statusList.rerender"/>
+            </when>
+            <action name="{@name}-add-selected-class">
+                <dataset:dataset-iterator dataset="capabilities">
+                    <dataset:dataset-iterator dataset="features">
+                        <if>
+                            <condition test="equal" value1="{$capabilities.id}" value2="{$features.parent-id}"/>
+                            <then>
+                                <set-field field="capabilities._selected-class" value="selected"/>
+                            </then>
+                        </if>
+                    </dataset:dataset-iterator>
+                </dataset:dataset-iterator>
+            </action>
+            <when event="{@name}.onUpdate">
+                <call-ajax-workflow name="composition/status/refresh" show-timer="n"/>
+            </when>
+        </behaviors>
+    </support:datacontext>
+</container>

@@ -1,0 +1,7 @@
+<do>
+    <dataset name="_status"/>
+    <create-row dataset="_status"/>
+    <dataset name="capabilities" databinding="capability"/>
+    <dataset name="features" databroker="feature"/>
+    <call-workflow name="composition/selection/refresh"/>
+</do>
