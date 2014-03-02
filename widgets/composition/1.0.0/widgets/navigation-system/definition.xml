@@ -1,5 +1,7 @@
 <widget name="navigation-system"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
-    <attributes></attributes>
+    <attributes>
+        <attribute name="capability-name" type="string" default="Navigation System"/>
+    </attributes>
     <children allowed="n"/>
     <includes>
         <js-include file="NavigationSystem.js"/>

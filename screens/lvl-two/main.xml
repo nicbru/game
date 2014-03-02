@@ -46,11 +46,22 @@
                     </container>
                 </edge-detecting-container>
             </kinetic>
-            
             <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
                 <when event="kinetic.onMove">
+                    <call-widget-method method="navigationSystemStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                    <call-widget-method method="navigationSystemEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="landingSiteStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="landingSiteEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                    <call-widget-method method="landingMethodStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                    <call-widget-method method="landingMethodEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
+                </when>
+                <when event="navigationSystemStatusEDC.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                </when>
+                <when event="navigationSystemEDC.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                    <call-widget-method method="kinetic.setX" value1="n"/>
+                    <call-widget-method method="navigationSystem.bindDragListener"/>
                 </when>
                 <when event="landingSiteStatusEDC.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
@@ -60,7 +71,21 @@
                     <call-widget-method method="kinetic.setX" value1="n"/>
                     <call-widget-method method="landingSite.bindDragListener"/>
                 </when>
+                <when event="landingMethodStatusEDC.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                </when>
+                <when event="landingMethodEDC.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                    <call-widget-method method="kinetic.setX" value1="n"/>
+                    <call-widget-method method="landingMethod.bindDragListener"/>
+                </when>
+                <when event="navigationSystem.onEndReached">
+                    <call-widget-method method="kinetic.setX" value1="y"/>
+                </when>
                 <when event="landingSite.onEndReached">
+                    <call-widget-method method="kinetic.setX" value1="y"/>
+                </when>
+                <when event="landingMethod.onEndReached">
                     <call-widget-method method="kinetic.setX" value1="y"/>
                 </when>
                 <when event="landingSite.onChange">

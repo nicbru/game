@@ -8,10 +8,13 @@ YAHOO
     var Toronto = YAHOO.com.aviarc.framework.toronto;
 
     game.NavigationSystem = function() {
-        
+        this.onBindDragListener = new Toronto.client.Event();
+        this.onEndReached = new Toronto.client.Event();
+        this.onChange = new Toronto.client.Event();
+        this.onUpdate = new Toronto.client.Event();
     };
 
-    YAHOO.lang.extend(game.NavigationSystem, Toronto.framework.DefaultWidgetImpl, {
+    YAHOO.lang.extend(game.NavigationSystem, Toronto.framework.DefaultTemplateWidgetImpl, {
 
         startup: function (widgetContext) {
             game.NavigationSystem.superclass.startup.apply(this, arguments);
@@ -23,6 +26,46 @@ YAHOO
 
         refresh: function () {
             
+        },
+        
+        change: function(value1, value2, value3, value4){
+        
+            this.onChange.fireEvent({
+                'value1': value1,
+                'value2': value2,
+                'value3': value3,
+                'value4': value4
+            });
+        },
+        
+        update: function(value1, value2, value3, value4){
+        
+            this.onUpdate.fireEvent({
+                'value1': value1,
+                'value2': value2,
+                'value3': value3,
+                'value4': value4
+            });
+        },
+        
+        bindDragListener: function(value1, value2, value3, value4){
+        
+            this.onBindDragListener.fireEvent({
+                'value1': value1,
+                'value2': value2,
+                'value3': value3,
+                'value4': value4
+            });
+        },
+        
+        endReached: function(value1, value2, value3, value4){
+        
+            this.onEndReached.fireEvent({
+                'value1': value1,
+                'value2': value2,
+                'value3': value3,
+                'value4': value4
+            });
         }
     });
 })();
