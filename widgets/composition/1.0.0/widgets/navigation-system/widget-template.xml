@@ -1,0 +1,37 @@
+<container
+    position="{@position}"
+    width="{@width}"
+    height="{@height}"
+    left="{@left}"
+    right="{@right}"
+    top="{@top}"
+    bottom="{@bottom}"
+    margin="{@margin}"
+    margin-top="{@margin-top}"
+    margin-bottom="{@margin-bottom}"
+    margin-left="{@margin-left}"
+    margin-right="{@margin-right}"
+    padding="{@padding}"
+    padding-top="{@padding-top}"
+    padding-bottom="{@padding-bottom}"
+    padding-left="{@padding-left}"
+    padding-right="{@padding-right}"
+    class="{@class}"
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
+    <support:datacontext workflow="composition/navigation-system/init">
+        <support:parameters>
+            <support:param name="capability-name" value="{@capability-name}"/>
+        </support:parameters>
+        <scene name="{@name}-capabilityScene" position="relative" width="100%" height="100%" path="/aviarc/game/www/img/scene1" extension="jpg" frames="49"/>
+        <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
+            <when widget-event="{@name}.onBindDragListener">
+                <call-widget-method method="{@name}-capabilityScene.bindDragListener"/>
+            </when>
+            <when event="{@name}-capabilityScene.onEndReached">
+                <call-widget-method method="{@name}.endReached"/>
+            </when>
+        </behaviors>
+    </support:datacontext>
+</container>

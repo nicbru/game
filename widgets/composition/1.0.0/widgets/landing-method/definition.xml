@@ -1,0 +1,10 @@
+<widget name="landing-method"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes>
+        <attribute name="capability-name" type="string" default="Landing Method"/>
+    </attributes>
+    <children allowed="n"/>
+    <includes>
+        <js-include file="LandingMethod.js"/>
+    </includes>
+    <js-constructor>new YAHOO.game.LandingMethod()</js-constructor>
+</widget>
