@@ -3,7 +3,7 @@ xmlns:composition="urn:aviarc:widget:composition"  >
     <layout:master-template position="static">
         <content id="main">
             <container position="absolute" offset="0">
-                <!--<composition:selection name="landingSiteStatus" left="0" top="0" bottom="0" right="0"/>-->
+                <composition:selection name="landingSiteStatus" left="0" top="0" bottom="0" right="0"/>
             </container>
 
             <container position="absolute" offset="0">

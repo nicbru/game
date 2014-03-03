@@ -12,3 +12,15 @@
 .$URN$_text-static-lineHeight60 {
     line-height:60px;
 }
+
+.$URN$_text-static-dark{
+    color:#303030;
+}
+
+.$URN$_text-static-light{
+    color:#b3b3b3;
+}
+
+.$URN$_text-static-large{
+    font-size: 25px;
+}

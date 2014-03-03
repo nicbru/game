@@ -16,6 +16,10 @@
     background-color:rgba(88, 87, 84, 0.8);
 }
 
+.$URN$_container-darker{
+    background-color:rgba(27, 27, 27, 1);
+}
+
 .$URN$_container-default-cursor{
     cursor: default;
 }
@@ -388,8 +392,33 @@
 	background-position: 0 0;
 }
 
+.$URN$_container-image {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/POD-smallhouse.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
 
+.$URN$_container-selected-bg {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landing-title.jpg);
+	background-size: 280px 100%;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
 
+.$URN$_container-landin-site-image {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landin-site-image.jpg);
+	background-size: 100% 100%;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+.$URN$_container-module-space {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/module-space.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
 
 
 
