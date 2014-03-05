@@ -24,3 +24,32 @@
 .$URN$_text-static-large{
     font-size: 25px;
 }
+
+.$URN$_text-static-large-responsive{
+    font-size: 1.5vw;
+}
+
+.$URN$_text-static-rotate-text{
+    -moz-transform:rotate(90deg); /* Firefox */
+    transform-origin: 0% 100%;
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+}
+
+
+
+.$URN$_text-static-niveau{
+    font: niveau;
+}
+
+
+
+/*@font-face {*/
+/*    font-family: NiveauGroteskExtraLight;*/
+/*    src: url(../fonts/NiveauGroteskExtraLight.otf) format("opentype");*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: NiveauGroteskRegular;*/
+/*    src: url(../fonts/NiveauGroteskRegular.otf) format("opentype");*/
+/*}*/

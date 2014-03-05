@@ -20,78 +20,79 @@
     xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset">
     <support:datacontext workflow="composition/selection/init">
         
-        <container position="relative" float="left" height="66%" width="100%" class="dark earth-image">
-            <container position="absolute" width="400" height="300" top="100" left="50" class="image"></container>
-        
+        <container position="relative" float="left" height="66%" width="100%" class="darker earth-image">
+            <container position="absolute" top="30%" width="100%" height="300" class="">
+                <container position="absolute" width="400" height="300" left="50" class="image"></container>
+            </container>
         </container>
         
         <container position="relative" float="left" height="10%" width="100%" class="darker">
             <container position="relative" float="left" height="40%" width="92%" margin-top="25" margin-left="4%" class="">
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
-                <container position="relative" float="left" width="4%" height="80%" margin-left="10" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
+                <container position="relative" float="left" width="4%" height="80%" margin-left="0.7%" margin-top="3" class="module-space"></container>
             </container>
             <container position="absolute" height="50" width="100" top="15" left="100" class="outline-grey pointer"></container>
         </container>
         
         <container position="relative" float="left" height="23%" width="100%" class="dark">
-            <container position="relative" float="left" height="100%" width="5%" class="accordian-navigation dark outline-grey">
-
+            <container position="relative" float="left" height="100%" width="5%" class="accordian-bg accordian-bg-hover dark outline-grey">
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Navigation" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-propulsion dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Propulsion" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-nutrition dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Nutrition" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="65%" class="outline-grey selected-bg">
                 <container position="relative" float="left" height="100%" width="7%" class="accordian-landing-site">
-            
+                    <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Landing Site" class="large-responsive light rotate-text niveau" />
                 </container>
                 <container position="absolute" height="90%" width="30%" left="8%" top="5%" class="darker landin-site-image">
-                    <text-static position="relative" float="right" margin-right="10%" margin-top="50%" text="Vally" class="dark large" />
+                    <text-static position="absolute" right="20px" bottom="10px" text="Valley" class="dark large" />
                 </container>
-                <container position="absolute" height="42%" width="60%" right="1%" top="5%" class="darker">
+                <container position="absolute" overflow="hidden" height="42%" width="60%" right="1%" top="5%" class="darker">
                     <text-static margin="10" text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
                     alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
                     If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the 
                     middle of text." class="light"/>
                 </container>
                 <container position="absolute" height="42%" width="60%" right="1%" bottom="5%" class="darker">
-                    <container position="relative" float="left" height="100%" width="20%" margin-left="40" class="image"></container> 
-                    <container position="relative" float="left" height="100%" width="20%" margin-left="40" class="image"></container> 
-                    <container position="relative" float="left" height="100%" width="20%" margin-left="40" class="image"></container> 
+                    <container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="image"></container> 
+                    <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image"></container> 
+                    <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image"></container> 
                 </container>
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-equipment dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Equipment" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-health dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Health" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-launching dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="200%" text="Launching" class="large-responsive light rotate-text niveau" />
             </container>
             <container position="relative" float="left" height="100%" width="5%" class="accordian-landing-method dark outline-grey">
-            
+                <text-static position="absolute" bottom="95%" left="15px" width="220%" text="Landing Method" class="large-responsive light rotate-text niveau" />
             </container>
         
         </container>

@@ -1,2 +1,7 @@
 <dataset name="backing-dataset">
+  <row>
+      <field name="id" value="739e54a6-ef67-4474-86ab-1728eb1a82a9"/>
+      <field name="player-id" value="8c3cbb27-cb99-4fd1-ad75-4ed7e89778ee"/>
+      <field name="feature-id" value="00fe8292-6bed-42fa-bd7f-427742bb8a57"/>
+  </row>
 </dataset>

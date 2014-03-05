@@ -7,6 +7,11 @@ html {
 	/*background:#636d73 url(screen_bg.png) 0 0px repeat-x;*/
 }
 
+@font-face {
+    font-family: "niveau";
+    src: url("../font/NiveauGroteskRegular.otf");
+}
+
 body.$URN$_screen {
     height: 100%;
     width: 100%;
@@ -14,7 +19,7 @@ body.$URN$_screen {
     bottom:0px;
     left:0px;
     right:0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: niveau, Arial, Helvetica, sans-serif;
     font-size: 75%;
 }
 

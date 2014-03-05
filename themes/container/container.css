@@ -343,6 +343,23 @@
 	background-repeat: no-repeat;
 }
 
+.$URN$_container-accordian-bg {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+}
+
+.$URN$_container-accordian-bg-hover:hover {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg-hover.jpg);
+	background-size: 900% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	z-index: 1;
+}
+
 .$URN$_container-accordian-navigation {
     background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/navigation.jpg);
 	background-size: 100% 100%;
@@ -350,46 +367,46 @@
 	background-position: 0 0;
 }
 .$URN$_container-accordian-propulsion {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/propulsion.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 12.5% 0;
 }
 .$URN$_container-accordian-nutrition {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/nutrition.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 25% 0;
 }
 .$URN$_container-accordian-landing-site {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landingSite.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 37.5% 0;
 }
 .$URN$_container-accordian-equipment {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/equipment.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 50% 0;
 }
 .$URN$_container-accordian-health {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/health.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 62.5% 0;
 }
 .$URN$_container-accordian-launching {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/launching.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 75% 0;
 }
 .$URN$_container-accordian-landing-method {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/landingMethod.jpg);
-	background-size: 100% 100%;
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 900% 100%;
 	background-repeat: no-repeat;
-	background-position: 0 0;
+	background-position: 87.5% 0;
 }
 
 .$URN$_container-image {
@@ -414,7 +431,7 @@
 }
 
 .$URN$_container-module-space {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/module-space.png);
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/empty-module2.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
