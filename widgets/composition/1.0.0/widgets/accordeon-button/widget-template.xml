@@ -18,19 +18,19 @@
         <container position="absolute" height="42%" width="65%" right="1%" bottom="5%" class="darker">
         
         
-            <dataset:dataset-iterator dataset="capabilities">
+<!--            <dataset:dataset-iterator dataset="capabilities">
                 <if>
                     <condition test="equal" value1="{$capabilities.name}" value2="{@capabilities-name}"/>
                     <then>
                         <container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="{$capabilities.capability}"></container>
                     </then>
                 </if>
-            </dataset:dataset-iterator>
+            </dataset:dataset-iterator>-->
         
         
         
         
-                <!--<container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="{$capabilities.capability}"></container> -->
+                <container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="{$capabilities.capability}"></container>
                 <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-meeting pointer"></container> 
                 <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-gym pointer"></container> 
                 <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-gym pointer"></container> 
