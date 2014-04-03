@@ -1,0 +1,12 @@
+<action:do xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1.4.2">
+    <action:call-widget-method method="navigation-inner-content.hide"/>
+    <action:call-widget-method method="propulsion-inner-content.hide"/>
+    <action:call-widget-method method="nutrition-inner-content.hide"/>
+    <action:call-widget-method method="landing-site-inner-content.hide"/>
+    <action:call-widget-method method="equipment-inner-content.hide"/>
+    <action:call-widget-method method="health-inner-content.hide"/>
+    <action:call-widget-method method="launching-inner-content.hide"/>
+    <action:call-widget-method method="landing-method-inner-content.hide"/>
+    
+    <action:call-widget-method method="{@nav-item}.show"/>
+</action:do>

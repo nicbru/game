@@ -5,19 +5,73 @@
             <container position="fixed" width="100%" height="600px">
                 <container position="absolute" width="135" height="42" left="46%" class="vertical-menu-tab hover-down"></container>
                 <container position="relative" float="left" width="100%" height="600px" class="level-two-menu drop-down">
-                    <container position="absolute" width="135" height="42" left="46%" top="600" class="vertical-menu-tab"></container>
-                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
-                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
-                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
-                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
-                    <container position="relative" float="left" width="20%" height="100%" class="outline-grey"></container>
+                    <container position="absolute" width="135" height="42" left="46%" top="600" class="vertical-menu-tab">
+                    </container>
+                    <container position="relative" float="left" width="20%" height="100%" class="">
+                        
+                    </container>
+                    <container position="relative" float="left" width="20%" height="100%" class="">
+                        <container position="relative" width="100%" height="100px" margin-top="60%" class="">
+                            <text-static position="relative" text="LAUNCH MISSION" class="center large lighter" />
+                            <container position="relative" margin="auto" width="50" height="50" class="menu-button center">
+                            
+                            </container>
+                        </container>
+                    </container>
+                    <container position="relative" float="left" width="20%" height="100%" class="">
+                        <container position="relative" width="100%" height="100px" margin-top="100%" class="">
+                            <text-static position="relative" text="TRAVEL TO MARS" class="center large lighter" />
+                            <container position="relative" width="100%" height="50" class="">
+                                <container position="relative" margin="auto" width="50" height="50" class="menu-button center">
+                            
+                                </container>
+                            </container>
+                        </container>
+                        <container position="relative" width="100%" height="100px" margin-top="20%" class="">
+                            <text-static position="relative" text="SUSTAIN CREW" class="center large lighter" />
+                            <container position="relative" width="100%" height="50" class="">
+                                <container position="relative" margin="auto" width="50" height="50" class="menu-button center">
+                            
+                                </container>
+                            </container>
+                        </container>
+                    </container>
+                    <container position="relative" float="left" width="20%" height="100%" class="">
+                        <container position="relative" width="100%" height="100px" margin-top="110%" class="">
+                            <text-static position="relative" text="LAND ON MARS" class="center large lighter" />
+                            <container position="relative" width="100%" height="50" class="">
+                                <container position="relative" margin="auto" width="50" height="50" class="menu-button center">
+                            
+                                </container>
+                            </container>
+                        </container>
+                    </container>
+                    <container position="relative" float="left" width="20%" height="100%" class="">
+                        <container position="relative" width="100%" height="100px" margin-top="130%" class="">
+                            <text-static position="relative" text="SURVIVE ON MARS" class="center large lighter" />
+                            <container position="relative" width="100%" height="50" class="">
+                                <container position="relative" margin="auto" width="50" height="50" class="menu-button center">
+                            
+                                </container>
+                            </container>
+                        </container>
+                    </container>
                 </container>
             </container>
         
             <kinetic name="kinetic" width="100%" height="100%" y-axis="n" class="nowrap" overflow="hidden">
-                <edge-detecting-container name="navigationSystemStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
+            
+<!--Bug - when you drag forward to navigation everything works fine but if you drag back to the start of the intro screen it gets stuck and you can no longer drag forward.-->
+                <edge-detecting-container name="introEDC" position="relative" width="100%" height="100%" class="inline-block">
                     <container position="absolute" offset="0">
-                        <composition:status name="navigationSystemStatus" left="0" top="100" bottom="0" right="0"/>
+                        <composition:intro name="intro" width="100%" height="100%" class="inline-block"/>
+                    </container>
+                </edge-detecting-container>
+            
+                <edge-detecting-container name="navigationSystemStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-blue">
+                    <container position="absolute" offset="0">
+                        <container position="relative" height="10%" width="100%" class="travel-to-mars"></container>
+                        <composition:status name="navigationSystemStatus" position="relative" height="90%" width="100%"/>
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="navigationSystemEDC" position="relative" width="100%" height="100%" class="inline-block">
@@ -27,7 +81,8 @@
                 </edge-detecting-container>
                 <edge-detecting-container name="landingSiteStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <composition:status name="landingSiteStatus" left="0" top="100" bottom="0" right="0"/>
+                        <container position="relative" height="10%" width="100%" class="travel-to-mars"></container>
+                        <composition:status name="landingSiteStatus" position="relative" height="90%" width="100%"/>
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="landingSiteEDC" position="relative" width="100%" height="100%" class="inline-block">
@@ -37,7 +92,8 @@
                 </edge-detecting-container>
                 <edge-detecting-container name="landingMethodStatusEDC" position="relative" width="200" height="100%" class="inline-block outline-grey">
                     <container position="absolute" offset="0">
-                        <composition:status name="landingMethodStatus" left="0" top="100" bottom="0" right="0"/>
+                        <container position="relative" height="10%" width="100%" class="travel-to-mars"></container>
+                        <composition:status name="landingMethodStatus" position="relative" height="90%" width="100%"/>
                     </container>
                 </edge-detecting-container>
                 <edge-detecting-container name="landingMethodEDC" position="relative" width="100%" height="100%" class="inline-block">
@@ -48,6 +104,7 @@
             </kinetic>
             <behaviors xmlns="urn:aviarc:widget:com.aviarc.toronto.widget.core.action">
                 <when event="kinetic.onMove">
+                    <call-widget-method method="introEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="navigationSystemStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="navigationSystemEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="landingSiteStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
@@ -55,6 +112,13 @@
                     <call-widget-method method="landingMethodStatusEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                     <call-widget-method method="landingMethodEDC.update" value1="{$event-parameters.left}" value2="{$event-parameters.top}" value3="{$event-parameters.isMovingLeft}" value4="{$event-parameters.isMovingUp}"/>
                 </when>
+                
+                <when event="introEDC.edgeDetected">
+                    <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
+                    <call-widget-method method="kinetic.setX" value1="n"/>
+                    <call-widget-method method="navigationSystem.bindDragListener"/>
+                </when>
+                
                 <when event="navigationSystemStatusEDC.edgeDetected">
                     <call-widget-method method="kinetic.adjustScrollLeft" value1="{$event-parameters.left}"/>
                 </when>
@@ -79,6 +143,11 @@
                     <call-widget-method method="kinetic.setX" value1="n"/>
                     <call-widget-method method="landingMethod.bindDragListener"/>
                 </when>
+                
+                <when event="intro.onEndReached">
+                    <call-widget-method method="kinetic.setX" value1="y"/>
+                </when>
+                
                 <when event="navigationSystem.onEndReached">
                     <call-widget-method method="kinetic.setX" value1="y"/>
                 </when>

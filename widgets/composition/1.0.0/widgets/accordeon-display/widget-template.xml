@@ -1,0 +1,17 @@
+<container 
+xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1.4.2"
+position="{@position}" float="{@float}" offset="{@offset}" width="{@width}" height="{@height}" left="{@left}" right="{@right}" top="{@top}" bottom="{@bottom}" margin="{@margin}" margin-top="{@margin-top}" margin-bottom="{@margin-bottom}" margin-left="{@margin-left}" margin-right="{@margin-right}" padding="{@padding}" padding-top="{@padding-top}" padding-bottom="{@padding-bottom}" padding-left="{@padding-left}" padding-right="{@padding-right}" min-width="{@min-width}" max-width="{@max-width}" min-height="{@min-height}" max-height="{@max-height}" visible="{@visible}" overflow="{@overflow}" class="{@class}">
+    
+    <action:call-widget-method method="navigation-inner-content.hide"/>
+    <action:call-widget-method method="propulsion-inner-content.hide"/>
+    <action:call-widget-method method="nutrition-inner-content.hide"/>
+    <action:call-widget-method method="landing-site-inner-content.hide"/>
+    <action:call-widget-method method="equipment-inner-content.hide"/>
+    <action:call-widget-method method="health-inner-content.hide"/>
+    <action:call-widget-method method="launching-inner-content.hide"/>
+    <action:call-widget-method method="landing-method-inner-content.hide"/>
+    
+    <action:call-widget-method method="{@nav-item}.show"/>
+    
+    
+</container>

@@ -8,8 +8,20 @@
     display:inline-block;
 }
 
+.$URN$_container-center{
+    margin: auto auto;
+}
+
 .$URN$_container-outline-grey{
     outline:1px solid #ddd;
+}
+
+.$URN$_container-outline-red{
+    outline:1px solid #db6347;
+}
+
+.$URN$_container-outline-blue{
+    outline:1px solid #68acc4;
 }
 
 .$URN$_container-dark{
@@ -74,11 +86,18 @@
 }
 
 .$URN$_container-level-two-menu {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-two-menu.jpg);
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/map-background.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	z-index: 1;
+}
+
+.$URN$_container-menu-button {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/menu-button.png);
+	background-size: 600% 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0;   /* -56 -105 -154 -202 -251 */ 
 }
 
 .$URN$_container-vertical-menu-tab{
@@ -356,61 +375,102 @@
 	background-size: 900% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	display: block;
-	z-index: 1;
+	display: block;      
 }
 
-.$URN$_container-accordian-navigation {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/navigation.jpg);
+.$URN$_container-accordian-propulsion {
+	background-position: 12.5% 0;
+}
+.$URN$_container-accordian-propulsion:hover {
+    background-position: 12.5% 0px;   
+}
+
+.$URN$_container-accordian-nutrition {
+	background-position: 25% 0;
+}
+.$URN$_container-accordian-nutrition:hover {
+    background-position: 25% 0px;   
+}
+
+.$URN$_container-accordian-landing-site {
+	background-position: 37.5% 0;
+}
+.$URN$_container-accordian-landing-site:hover {
+    background-position: 37.5% 0px;   
+}
+
+.$URN$_container-accordian-equipment {
+	background-position: 50% 0;
+}
+.$URN$_container-accordian-equipment:hover {
+    background-position: 50% 0px;   
+}
+
+.$URN$_container-accordian-health {
+	background-position: 62.5% 0;
+}
+.$URN$_container-accordian-health:hover {
+    background-position: 62.5% 0px;   
+}
+
+.$URN$_container-accordian-launching {
+	background-position: 75% 0;
+}
+.$URN$_container-accordian-launching:hover {
+    background-position: 75% 0px;   
+}
+
+.$URN$_container-accordian-landing-method {
+	background-position: 87.5% 0;
+}
+.$URN$_container-accordian-landing-method:hover {
+    background-position: 87.5% 0px;   
+}
+
+.$URN$_container-travel-to-mars {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/Level2-change.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
-.$URN$_container-accordian-propulsion {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 12.5% 0;
-}
-.$URN$_container-accordian-nutrition {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 25% 0;
-}
-.$URN$_container-accordian-landing-site {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 37.5% 0;
-}
-.$URN$_container-accordian-equipment {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 50% 0;
-}
-.$URN$_container-accordian-health {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 62.5% 0;
-}
-.$URN$_container-accordian-launching {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 75% 0;
-}
-.$URN$_container-accordian-landing-method {
-    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
-	background-size: 900% 100%;
-	background-repeat: no-repeat;
-	background-position: 87.5% 0;
-}
 
 .$URN$_container-image {
     background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/POD-smallhouse.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-image-silo {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/pod-silo.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-image-gym {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/pod-gym.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-image-meeting {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/pod-meeting.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-image-navigation {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/pod-navigation.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.$URN$_container-image-unit {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/Pod-SmallUnit.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -437,8 +497,16 @@
 	background-position: 0 0;
 }
 
+.$URN$_container-intro {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/Level2-change.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
 
-
+.$URN$_container-hack > div{
+   height:100%;
+}
 
 
 

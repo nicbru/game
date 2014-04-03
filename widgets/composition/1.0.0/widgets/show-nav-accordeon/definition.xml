@@ -1,0 +1,6 @@
+<widget name="show-nav-accordeon" action="y" container-positioning="n" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes>
+        <attribute name="nav-item" type="string" mandatory="true"/>
+    </attributes>
+    <children allowed="n"/>
+</widget>

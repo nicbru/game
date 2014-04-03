@@ -1,0 +1,4 @@
+<widget name="accordeon-button"  container-positioning="y" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes></attributes>
+    <children allowed="n"/>
+</widget>

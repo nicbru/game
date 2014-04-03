@@ -21,22 +21,47 @@
     color:#b3b3b3;
 }
 
+.$URN$_text-static-lighter{
+    color:#f6e8d3;
+}
+
 .$URN$_text-static-large{
     font-size: 25px;
 }
 
-.$URN$_text-static-large-responsive{
+.$URN$_text-static-small-responsive{
+    font-size: 1.2vw;
+}
+
+.$URN$_text-static-medium-responsive{
     font-size: 1.5vw;
+}
+
+.$URN$_text-static-large-responsive{
+    font-size: 1.6vw;
+}
+
+.$URN$_text-static-larger-responsive{
+    font-size: 1.7vw;
+}
+
+.$URN$_text-static-huge-responsive{
+    font-size: 1.8vw;
 }
 
 .$URN$_text-static-rotate-text{
     -moz-transform:rotate(90deg); /* Firefox */
     transform-origin: 0% 100%;
     -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -webkit-transform-origin: 0% 100%;
     -o-transform:rotate(90deg); /* Opera */
+    -ms-transform:rotate(90deg); /* Firefox */
+    -ms-transform-origin: 0% 100%;
 }
 
-
+.$URN$_text-static-center{
+    text-align: center;
+}
 
 .$URN$_text-static-niveau{
     font: niveau;

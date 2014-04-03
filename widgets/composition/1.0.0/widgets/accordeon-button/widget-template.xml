@@ -1,0 +1,41 @@
+<container 
+    xmlns:support="urn:aviarc:widget:support"
+    xmlns:dataset="urn:aviarc:widget:com.aviarc.toronto.widget.core.action.dataset"
+    position="{@position}" float="{@float}" offset="{@offset}" width="{@width}" height="{@height}" left="{@left}" right="{@right}" top="{@top}" bottom="{@bottom}" margin="{@margin}" margin-top="{@margin-top}" margin-bottom="{@margin-bottom}" margin-left="{@margin-left}" margin-right="{@margin-right}" padding="{@padding}" padding-top="{@padding-top}" padding-bottom="{@padding-bottom}" padding-left="{@padding-left}" padding-right="{@padding-right}" min-width="{@min-width}" max-width="{@max-width}" min-height="{@min-height}" max-height="{@max-height}" visible="{@visible}" overflow="{@overflow}" class="{@class}">
+    
+    <support:datacontext workflow="composition/selection/init">
+    <container position="relative" float="left" width="100%" height="100%" class="selected-bg">
+        <container position="absolute" height="90%" width="30%" left="2%" top="5%" class="darker {@title-image}">
+            <text-static position="absolute" right="20px" bottom="10px" text="{@title}" class="dark large" />
+        </container>
+        <container position="absolute" overflow="hidden" height="42%" width="65%" right="1%" top="5%" class="darker">
+            <text-static margin="10" text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
+            alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+            If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the 
+            middle of text." class="light"/>
+        </container>
+        
+        <container position="absolute" height="42%" width="65%" right="1%" bottom="5%" class="darker">
+        
+        
+            <dataset:dataset-iterator dataset="capabilities">
+                <if>
+                    <condition test="equal" value1="{$capabilities.name}" value2="{@capabilities-name}"/>
+                    <then>
+                        <container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="{$capabilities.capability}"></container>
+                    </then>
+                </if>
+            </dataset:dataset-iterator>
+        
+        
+        
+        
+                <!--<container position="relative" float="left" height="100%" width="20%" margin-left="2%" class="{$capabilities.capability}"></container> -->
+                <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-meeting pointer"></container> 
+                <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-gym pointer"></container> 
+                <container position="relative" float="left" height="100%" width="20%" margin-left="6%" class="image-gym pointer"></container> 
+        </container>
+    </container>
+    </support:datacontext>
+    
+</container>

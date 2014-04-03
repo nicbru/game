@@ -2,6 +2,7 @@
     border:2px solid #f7f7f7;
     border-radius:2px;
     background-color:#7c9aa6;
+    overflow: hidden !important;
 }
 
 .$URN$_button:hover{
@@ -36,8 +37,7 @@
     font-size:14px;
     line-height:14px;
     text-align:center;
-    font-weight:bold;
-    color:#f7f7f7;
+    color:#B3B3B3;
 }
 
 .$URN$_button-no-bg:hover{
@@ -59,3 +59,96 @@
     transition: all 0.7s ease;
     z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+
+.$URN$_button-accordian-bg > a.button-anchor > span{
+    -moz-transform:rotate(90deg); /* Firefox */
+    transform-origin: 0% 100%;
+    -webkit-transform:rotate(90deg); /* Safari and Chrome */
+    -webkit-transform-origin: 0% 100%;
+    -o-transform:rotate(90deg); /* Opera */
+    -ms-transform:rotate(90deg); /* Firefox */
+    -ms-transform-origin: 0% 100%;
+    top: 0 !important; 
+    left: 40%;
+    font-size: 1.6vw !important;
+    text-align: left !important;
+    width: 500% !important;
+}
+
+.$URN$_button-accordian-bg {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg.jpg);
+	background-size: 800% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	border: 0;
+	border-radius: 0 !important;
+}
+
+.$URN$_button-accordian-bg-hover:hover {
+    background-image: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.0.0:image/level-three/accordian-bg-hover.jpg);
+	background-size: 800% 100%;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block; 
+	border: 0px;
+}
+
+.$URN$_button-accordian-propulsion {
+	background-position: 14.3% 0;
+}
+.$URN$_button-accordian-propulsion:hover {
+    background-position: 14.3% 0px;   
+}
+
+.$URN$_button-accordian-nutrition {
+	background-position: 28.6% 0;
+}
+.$URN$_button-accordian-nutrition:hover {
+    background-position: 28.6% 0px;   
+}
+
+.$URN$_button-accordian-landing-site {
+	background-position: 42.9% 0;
+}
+.$URN$_button-accordian-landing-site:hover {
+    background-position: 42.9% 0px;   
+}
+
+.$URN$_button-accordian-equipment {
+	background-position: 57.1% 0;
+}
+.$URN$_button-accordian-equipment:hover {
+    background-position: 57.1% 0px;   
+}
+
+.$URN$_button-accordian-health {
+	background-position: 71.4% 0;
+}
+.$URN$_button-accordian-health:hover {
+    background-position: 71.4% 0px;   
+}
+
+.$URN$_button-accordian-launching {
+	background-position: 85.7% 0;
+}
+.$URN$_button-accordian-launching:hover {
+    background-position: 85.7% 0px;   
+}
+
+.$URN$_button-accordian-landing-method {
+	background-position: 100% 0;
+}
+.$URN$_button-accordian-landing-method:hover {
+    background-position: 100% 0px;   
+}
+
